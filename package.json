@@ -13,6 +13,7 @@
     "url": "https://github.com/chingsley/ireporter-react/issues"
   },
   "homepage": "https://github.com/chingsley/ireporter-react#readme",
+  "heroku_link": "https://chingsley-ireporter-react.herokuapp.com/",
   "pre-commit": [
     "lint",
     "test"
