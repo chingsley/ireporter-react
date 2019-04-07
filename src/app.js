@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import AppRouter from './router/AppRouter';
+import configureStore from './store/configureStore';
 
-import './assets/scss/test.scss';
+import './styles/index.scss';
 
-const title = 'Authors Haven';
+const store = configureStore();
 
-ReactDOM.render(
-  <div>{title}</div>,
-  document.getElementById('app')
+const jsx = (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
 );
+ReactDOM.render(jsx, document.getElementById('app'));
 
 module.hot.accept();
