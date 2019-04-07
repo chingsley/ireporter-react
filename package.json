@@ -28,12 +28,12 @@
     "start": "node server.js",
     "webpack": "webpack",
     "lint": "eslint . --ext .js,.jsx && npm run sass-lint",
-    "lint-n-fix": "eslint --fix . --ext .js,.jsx && npm run sass-lint",
     "sass-lint": "sass-lint 'src/**/*.scss' -q -v",
-      "test": "jest",
-      "test:watch": "jest --watch",
-      "test:coverage": "npm run coverage",
-      "coverage": "jest --coverage --colors"
+    "lint:fix": "eslint --fix . --ext .js,.jsx && npm run sass-lint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "npm run coverage",
+    "coverage": "jest --coverage --colors"
   },
   "dependencies": {
     "autoprefixer": "^9.5.0",
