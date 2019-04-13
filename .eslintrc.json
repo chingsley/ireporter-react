@@ -24,6 +24,13 @@
     "jest": true
   },
   "rules": {
+    "react/destructuring-assignment": [
+      2,
+      "always",
+      {
+        "ignoreClassFields": true
+      }
+    ],
     "one-var": 0,
     "one-var-declaration-per-line": 0,
     "new-cap": 0,
@@ -143,5 +150,6 @@
         "devDependencies": true
       }
     ]
+   
   }
 }
