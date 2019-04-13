@@ -1,6 +1,10 @@
 import React, { Fragment, Component } from 'react';
+import propTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { toast } from 'react-toastify';
+import { authorise } from '../actions/auth';
 
-export default class SignUpForm extends Component {
+export class UserForm extends Component {
   constructor(props) {
     super(props);
 
@@ -12,22 +16,35 @@ export default class SignUpForm extends Component {
       email: '',
       password: '',
       phoneNumber: '',
-      adminSecret: ''
+      adminSecret: '',
     };
 
+    this.formType = props.formType;
+    this.history = props.history;
+
     this.onSubmit = this.onSubmit.bind(this);
-    this.onFirstnameChange = this.onFirstnameChange.bind(this);
   }
 
-  onSubmit(e) {
+  componentDidMount() {
+    const { isLoggedIn, fetching } = this.props;
+    if (!fetching && isLoggedIn) {
+      toast.info('You are currently signed signed in');
+      this.history.push('/');
+    }
+  }
+
+  async onSubmit(e) {
     e.preventDefault();
-    const { onSubmit } = this.props;
-    onSubmit({ ...this.state });
-  }
+    const {
+      authorise: handleAuthorisation,
+    } = this.props;
+    await handleAuthorisation({ ...this.state }, this.formType);
 
-  onFirstnameChange(e) {
-    const firstname = e.target.value;
-    this.setState({ firstname });
+    const { isLoggedIn, fetching } = this.props;
+    if (!fetching && isLoggedIn) {
+      toast.info('You are currently signed signed in');
+      this.history.push('/');
+    }
   }
 
   render() {
@@ -39,81 +56,119 @@ export default class SignUpForm extends Component {
       email,
       password,
       phoneNumber,
-      adminSecret
+      adminSecret,
     } = this.state;
-    const { formType } = this.props;
     return (
-      <form onSubmit={this.onSubmit} className="form">
-        {formType === 'registration' && (
-          <Fragment>
-            <input
-              type="text"
-              id="firstname"
-              value={firstname}
-              onChange={this.onFirstnameChange}
-              placeholder="first name"
-              required
-            />
-            <input
-              type="text"
-              id="lastname"
-              value={lastname}
-              onChange={e => this.setState({ lastname: e.target.value })}
-              placeholder="last name"
-              required
-            />
-            <input
-              type="text"
-              id="othernames"
-              value={othernames}
-              onChange={e => this.setState({ othernames: e.target.value })}
-              placeholder="other names"
-            />
-            <input
-              type="text"
-              id="username"
-              value={username}
-              onChange={e => this.setState({ username: e.target.value })}
-              placeholder="username"
-            />
-            <input
-              type="text"
-              id="phonenumber"
-              placeholder="phone number"
-              value={phoneNumber}
-              onChange={e => this.setState({ phoneNumber: e.target.value })}
-              required
-            />
-            <input
-              type="text"
-              id="adminSecret"
-              placeholder="admin secret key"
-              value={adminSecret}
-              onChange={e => this.setState({ adminSecret: e.target.value })}
-            />
-            <input type="file" id="input-file-pic" />
-          </Fragment>
-        )}
-        <input
-          type="text"
-          id="email"
-          placeholder="email"
-          value={email}
-          onChange={e => this.setState({ email: e.target.value })}
-          required
-        />
-        <input
-          type="text"
-          id="password"
-          placeholder="password"
-          value={password}
-          onChange={e => this.setState({ password: e.target.value })}
-          required
-        />
-        <button className="btn-reg btn" id="btn-reg">
-          { formType === 'registration' ? 'REGISTER' : 'LOGIN' }
-        </button>
-      </form>
+      <div className="container">
+        <form onSubmit={this.onSubmit} className="container__form">
+          <input
+            className="container__form-input"
+            type="email"
+            id="email"
+            placeholder="email"
+            value={email}
+            onChange={e => this.setState({ email: e.target.value })}
+            required
+          />
+          <input
+            className="container__form-input"
+            type="text"
+            id="password"
+            placeholder="password"
+            value={password}
+            onChange={e => this.setState({ password: e.target.value })}
+            required
+          />
+          {this.formType === 'signup' && (
+            <Fragment>
+              <input
+                className="container__form-input"
+                type="text"
+                id="firstname"
+                value={firstname}
+                onChange={e => this.setState({ firstname: e.target.value })}
+                placeholder="first name"
+                required
+              />
+              <input
+                className="container__form-input"
+                type="text"
+                id="lastname"
+                value={lastname}
+                onChange={e => this.setState({ lastname: e.target.value })}
+                placeholder="last name"
+                required
+              />
+              <input
+                className="container__form-input"
+                type="text"
+                id="othernames"
+                value={othernames}
+                onChange={e => this.setState({ othernames: e.target.value })
+                }
+                placeholder="other names"
+              />
+              <input
+                className="container__form-input"
+                type="text"
+                id="username"
+                value={username}
+                onChange={e => this.setState({ username: e.target.value })}
+                placeholder="username"
+              />
+              <input
+                className="container__form-input"
+                type="text"
+                id="phonenumber"
+                placeholder="phone number"
+                value={phoneNumber}
+                onChange={e => this.setState({ phoneNumber: e.target.value })
+                }
+                required
+              />
+              <input
+                className="container__form-input"
+                type="text"
+                id="adminSecret"
+                placeholder="admin secret key"
+                value={adminSecret}
+                onChange={e => this.setState({ adminSecret: e.target.value })
+                }
+              />
+              <input
+                className="container__form-input"
+                type="file"
+                id="input-file-pic"
+              />
+            </Fragment>
+          )}
+          <button className="container__form-btn" id="btn-reg" type="submit">
+            {this.formType === 'signup' ? 'REGISTER' : 'LOGIN'}
+          </button>
+        </form>
+      </div>
     );
   }
 }
+
+UserForm.defaultProps = {
+  formType: 'signup',
+  isLoggedIn: false,
+  fetching: false,
+};
+
+UserForm.propTypes = {
+  authorise: propTypes.func.isRequired,
+  formType: propTypes.string,
+  isLoggedIn: propTypes.bool,
+  fetching: propTypes.bool,
+  history: propTypes.oneOfType([propTypes.object, propTypes.func]).isRequired,
+};
+
+const mapStateToProps = state => ({
+  isLoggedIn: state.auth.isLoggedIn,
+  fetching: state.fetchStatus.fetching,
+
+});
+
+export default connect(mapStateToProps, { authorise })(UserForm);

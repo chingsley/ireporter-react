@@ -4,6 +4,6 @@ module.exports = {
     contentBase: `${__dirname}/dist`,
     historyApiFallback: true,
     port: 4000,
-    hot: true
-  }
+    hot: true,
+  },
 };

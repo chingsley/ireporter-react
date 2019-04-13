@@ -1,2 +1,8 @@
-@import './base/settings';
+@import './base/variables';
 @import './base/base';
+
+@import './components/authForm';
+@import './components/header';
+
+@import './utilities/loader';
+@import './utilities/toaster';

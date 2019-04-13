@@ -10,7 +10,7 @@ const report1 = {
   status: 'draft',
   type: 'red-flag',
   createdon: Date.now(),
-  createdby: 'James'
+  createdby: 'James',
 };
 const report2 = {
   address: 'Volaris',
@@ -21,7 +21,7 @@ const report2 = {
   status: 'draft',
   type: 'red-flag',
   createdon: Date.now(),
-  createdby: 'John'
+  createdby: 'John',
 };
 
 const AdminPage = () => (

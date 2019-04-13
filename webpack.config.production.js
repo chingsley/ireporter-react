@@ -5,19 +5,19 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   optimization: {
-    minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin({})]
+    minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin({})],
   },
   module: {
     rules: [
       {
         test: /\.s?css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      }
-    ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './css/[name].css'
-    })
-  ]
+      filename: './css/[name].css',
+    }),
+  ],
 };

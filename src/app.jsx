@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import AppRouter from './router/AppRouter';
+// eslint-disable-next-line import/extensions
+import AppRouter from './router/AppRouter.jsx';
 import configureStore from './store/configureStore';
 
 import './styles/index.scss';

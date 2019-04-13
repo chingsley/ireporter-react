@@ -1,6 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
+import {
+  BrowserRouter, Route, Switch,
+} from 'react-router-dom';
+import { ToastContainer, Flip } from 'react-toastify';
 import { connect } from 'react-redux';
 import Home from '../components/HomePage';
 import Header from '../components/Header';
@@ -18,6 +20,7 @@ const AppRouter = props => (
   <BrowserRouter>
     {props.loading && <Loader />}
     <Header />
+    <ToastContainer transition={Flip} autoClose={2000} />
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/login" component={LoginPage} />
@@ -34,7 +37,7 @@ const AppRouter = props => (
 
 const mapStateToProps = state => ({
   loading: state.fetchStatus.fetching,
-  isLoggedIn: state.auth.isLoggedIn
+  isLoggedIn: state.auth.isLoggedIn,
 });
 
 export default connect(mapStateToProps)(AppRouter);

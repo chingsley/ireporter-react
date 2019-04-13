@@ -12,7 +12,7 @@ export default class FormReport extends Component {
       images: '',
       videos: '',
       status: 'draft',
-      type: 'red-flag'
+      type: 'red-flag',
     };
   }
 
@@ -69,7 +69,7 @@ export default class FormReport extends Component {
           rows="6"
           placeholder="enter your comments"
         />
-        <button className="btn" id="btn-send-report">
+        <button className="btn" id="btn-send-report" type="submit">
           send
         </button>
       </form>

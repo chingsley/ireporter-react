@@ -14,13 +14,13 @@ export class TableRow extends Component {
       status: report ? report.status : 'draft',
       type: report ? report.status : 'please choose a type of record [red-flag or intervention]',
       createdon: report ? report.createdon : 'unknown date',
-      createdby: report ? report.createdby : 'anonymous'
+      createdby: report ? report.createdby : 'anonymous',
     };
   }
 
   render() {
     const {
-      address, comment, createdon, createdby, type
+      address, comment, createdon, createdby, type,
     } = this.state;
     return (
       <tr className="row">
