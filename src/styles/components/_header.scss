@@ -1,0 +1,23 @@
+.header-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  li {
+    float: right;
+  }
+
+  .header-NavLink {
+    // border: 1px solid black;
+  display: block;
+  text-align: center;
+  padding: 0 3rem;
+  text-decoration: none;
+  }
+
+  .header-NavLink:hover {
+    border-bottom: .2rem solid red;
+  }
+
+}

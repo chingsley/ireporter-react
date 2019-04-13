@@ -2,11 +2,11 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/app.jsx',
   output: {
     path: `${__dirname}/dist`,
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -16,30 +16,30 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
       },
       {
         test: /\.s?css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(gif|png|jpe?g|woff|woff2|eot|ttf|svg)$/i,
         use: [
-          'file-loader'
-        ]
-      }
-    ]
+          'file-loader',
+        ],
+      },
+    ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.css', '.scss']
+    extensions: ['*', '.js', '.jsx', '.css', '.scss'],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: './index.html'
-    })
+      filename: './index.html',
+    }),
   ],
 };
