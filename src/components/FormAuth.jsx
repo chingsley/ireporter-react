@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { toast } from 'react-toastify';
 import { authorise } from '../actions/auth';
 
-export class UserForm extends Component {
+export class FormAuth extends Component {
   constructor(props) {
     super(props);
 
@@ -42,7 +42,6 @@ export class UserForm extends Component {
 
     const { isLoggedIn, fetching } = this.props;
     if (!fetching && isLoggedIn) {
-      toast.info('You are currently signed signed in');
       this.history.push('/');
     }
   }
@@ -135,11 +134,11 @@ export class UserForm extends Component {
                 onChange={e => this.setState({ adminSecret: e.target.value })
                 }
               />
-              <input
+              {/* <input
                 className="container__form-input"
                 type="file"
                 id="input-file-pic"
-              />
+              /> */}
             </Fragment>
           )}
           <button className="container__form-btn" id="btn-reg" type="submit">
@@ -151,13 +150,13 @@ export class UserForm extends Component {
   }
 }
 
-UserForm.defaultProps = {
+FormAuth.defaultProps = {
   formType: 'signup',
   isLoggedIn: false,
   fetching: false,
 };
 
-UserForm.propTypes = {
+FormAuth.propTypes = {
   authorise: propTypes.func.isRequired,
   formType: propTypes.string,
   isLoggedIn: propTypes.bool,
@@ -171,4 +170,6 @@ const mapStateToProps = state => ({
 
 });
 
-export default connect(mapStateToProps, { authorise })(UserForm);
+const FormLoginAndSignup = connect(mapStateToProps, { authorise })(FormAuth);
+
+export default FormLoginAndSignup;

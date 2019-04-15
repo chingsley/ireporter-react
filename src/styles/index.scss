@@ -3,6 +3,9 @@
 
 @import './components/authForm';
 @import './components/header';
+@import './components/googlemap';
+
+@import './pages/createReport.scss';
 
 @import './utilities/loader';
 @import './utilities/toaster';

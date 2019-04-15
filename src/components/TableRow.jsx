@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class TableRow extends Component {
   constructor(props) {
@@ -52,5 +53,9 @@ export class TableRow extends Component {
     );
   }
 }
+
+TableRow.propTypes = {
+  report: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
+};
 
 export default TableRow;
