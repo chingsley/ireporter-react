@@ -1,18 +1,27 @@
 .Toastify__toast {
   border-radius: 2px;
   font-size: 16px;
-  font-weight: 700;
   font-style: italic;
+  font-weight: 700;
   font-weight: 300;
   padding: 10px 20px;
 
   &--error {
     // background: rgba(255, 165, 0, .8);
-    background: red;
-    color: white;
+    background: #ff0000;
+    color: #ffffff;
     position: absolute;
-    top: 10rem;
     right: 0;
+    top: 10rem;
     width: 40%;
+  }
+
+  &--success {
+    background: #90ee90;
+    color: #000000;
+    position: absolute;
+    right: 0;
+    top: 10rem;
+    width: 30%;
   }
 }

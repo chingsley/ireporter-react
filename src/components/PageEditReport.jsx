@@ -4,7 +4,7 @@ import GoogleMap from './GoogleMap';
 
 const ReportPage = () => (
   <div>
-    <h2>MAKE A NEW REPORT</h2>
+    <h2>EDIT REPORT</h2>
     <GoogleMap />
     <FormReport />
   </div>

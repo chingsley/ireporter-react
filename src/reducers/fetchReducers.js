@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         fetching: false,
-        errMessage: action.payload.error ? action.payload.message : ''
+        errMessage: action.payload.error ? action.payload.message : '',
       };
     default:
       return state;
