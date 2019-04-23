@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import { ToastContainer, Flip } from 'react-toastify';
 import { connect } from 'react-redux';
-import Home from '../components/HomePage';
+import Home from '../components/PageHomePage';
 import Header from '../components/Header';
 import AdminPage from '../components/AdminPage';
 import NotFound from '../components/404';

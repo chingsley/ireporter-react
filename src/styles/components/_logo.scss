@@ -1,0 +1,30 @@
+
+.logo {
+  font-family: Arial, Helvetica, sans-serif;
+  border-top: 5px solid transparent;
+  border-right: 5px solid white;
+  border-top: 3px solid white;
+  border-left: 1px solid white;
+  border-radius: 60%;
+  padding: 0 0;
+  width: 12em;
+  height: 50px;
+  cursor: pointer;
+  &__h1 {
+    font-size: 3em;
+    &--link-on-black {
+      color: $color-red;
+      text-decoration: none;
+      &__span-i {
+        color: $color-white;
+        // font-style: italic;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: bold;
+      }
+      &__span-repa {
+        font-size: 1.2em;
+        text-shadow: 1px 1px 0px white;
+      }
+    }
+  }
+}

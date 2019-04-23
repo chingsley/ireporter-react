@@ -1,24 +1,39 @@
+
+.header-inner-wrapper {
+  padding: 0;
+  position: absolute;
+  border: 1px solid black;
+  top: 1em;
+  right: 1em;
+  margin-top: 1.5em;
+  width: 100%;
+}
+
+.header-logo {
+  float: left;
+  margin-left: 4em;
+  transform: scale(0.6);
+}
 .header-ul {
   list-style-type: none;
   margin: 0;
   overflow: hidden;
-  padding: 0;
 
   li {
     float: right;
   }
 
   .header-NavLink {
-    // border: 1px solid black;
-  border-bottom: .2rem solid transparent;
-  display: block;
-  padding: 0 3rem;
-  text-align: center;
-  text-decoration: none;
+    color: $color-white;
+    border-bottom: .2rem solid transparent;
+    display: block;
+    padding: 0 3rem;
+    text-align: center;
+    text-decoration: none;
   }
 
   .header-NavLink:hover {
-    border-bottom: .2rem solid #ff0000;
+    border-bottom: .2rem solid $color-red;
   }
 
 }
