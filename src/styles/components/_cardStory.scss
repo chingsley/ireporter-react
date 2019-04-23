@@ -1,0 +1,14 @@
+.card {
+  min-height: 10em;
+  width: 23.3em;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  &__img {
+    width: 100%;
+  }
+
+  .link-on-black {
+    color: $color-shaded-black;
+  }
+}

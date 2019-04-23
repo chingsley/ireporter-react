@@ -4,8 +4,15 @@
 @import './components/authForm';
 @import './components/header';
 @import './components/googlemap';
+@import './components/sectionMainView';
+@import './components/sectionWhatWeDo';
+@import './components/sectionOurStories';
+@import './components/cardStory.scss';
+@import './components/footer';
+@import './components/logo';
 
-@import './pages/createReport.scss';
+@import './pages/createReport';
+@import './pages/pageHomePage';
 
 @import './utilities/loader';
 @import './utilities/toaster';

@@ -1,0 +1,33 @@
+.section-stories {
+  // border: 1px solid blue;
+  margin-top: 8em;
+  
+  &__title {
+    color: $color-shaded-black;
+    text-align: center;
+    // border: 1px solid black;
+    font-size: 3.5em;
+    letter-spacing: 0.3em;
+  }
+
+  &__cards-container {
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    // align-items: space-between;
+    justify-content: space-around;
+
+  }
+}
+
+
+@media only screen and (max-width: 720px) {
+  .section-stories {
+  
+    &__title {
+      font-size: 3.5em;
+      letter-spacing: 0;
+    }
+  }
+}
