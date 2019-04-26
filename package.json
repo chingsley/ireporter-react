@@ -19,8 +19,8 @@
     "test"
   ],
   "scripts": {
-    "preinstall": "rm -rf dist",
-    "postinstall": "npm run build",
+    "preinstallcmd": "rm -rf dist",
+    "postinstallcmd": "npm run build",
     "build": "npm run build:prod",
     "build:dev": "webpack --env.mode development --open --hot",
     "build:prod": "webpack --env.mode production",
@@ -32,14 +32,15 @@
     "sass-lint": "sass-lint 'src/**/*.scss' -q -v",
     "sass-lint:fix": "sass-lint-auto-fix",
     "lint:fix": "eslint --fix . --ext .js,.jsx && npm run sass-lint",
-    "test": "jest",
+    "test": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "test:dev": "jest --coverage --updateSnapshot",
     "test:watch": "jest --watch",
-    "test:coverage": "npm run coverage",
-    "coverage": "jest --coverage --colors"
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "autoprefixer": "^9.5.0",
     "axios": "^0.18.0",
+    "enzyme-adapter-react-16": "^1.11.2",
     "express": "^4.16.4",
     "google-maps-react": "^2.0.2",
     "html-webpack-plugin": "^3.2.0",
@@ -55,6 +56,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/plugin-transform-runtime": "^7.4.3",
     "@babel/polyfill": "^7.4.0",
     "@babel/preset-env": "^7.4.3",
@@ -65,9 +67,9 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "coveralls": "^3.0.3",
     "css-loader": "^2.1.1",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
@@ -78,6 +80,7 @@
     "jest": "^24.5.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
+    "nyc": "^14.0.0",
     "pre-commit": "^1.2.2",
     "react-hot-loader": "^4.8.2",
     "sass": "^1.17.4",
