@@ -5,17 +5,18 @@ import {
 } from 'react-router-dom';
 import { ToastContainer, Flip } from 'react-toastify';
 import { connect } from 'react-redux';
-import Home from '../components/PageHomePage';
+import AdminPage from '../components/PageAdmin';
+import CreateReportPage from '../components/PageCreateReport';
+import EditReportPage from '../components/PageEditReport';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
-import AdminPage from '../components/AdminPage';
-import NotFound from '../components/404';
+import Home from '../components/PageHomePage';
 import Loader from '../components/Loader';
 import LoginPage from '../components/PageLogin';
-import Register from '../components/PageSignup';
+import NotFound from '../components/404';
 import PageViewAllReports from '../components/PageViewAllReports';
-import EditReportPage from '../components/PageEditReport';
-import CreateReportPage from '../components/PageCreateReport';
-import Footer from '../components/Footer';
+import Register from '../components/PageSignup';
+import UserProfile from '../components/PageUserProfile';
 
 const AppRouter = (props) => {
   const { loading } = props;
@@ -31,6 +32,7 @@ const AppRouter = (props) => {
         <Route path="/login" component={LoginPage} />
         <Route path="/signup" component={Register} />
         <Route path="/admin_dashboard" component={AdminPage} />
+        <Route path="/profile" component={UserProfile} />
         <Route path="/" component={Home} exact />
         <Route component={NotFound} />
       </Switch>

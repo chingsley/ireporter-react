@@ -1,16 +1,19 @@
+.header {
+  background-color: black;
+  padding: 0.1em 0.1em;
 
+  &__not-home-page {
+    background-color: #1c1c1c;
+  }
+}
 .header-inner-wrapper {
   padding: 0;
-  position: absolute;
-  border: 1px solid black;
-  top: 1em;
-  right: 1em;
-  margin-top: 1.5em;
+  padding: 2em 2em;
   width: 100%;
 }
 
 .header-logo {
-  float: left;
+  position: absolute; // ie. absolute position relative to the body, not the header, because the header doesn't have position: relative
   margin-left: 4em;
   transform: scale(0.6);
 }
@@ -21,19 +24,42 @@
 
   li {
     float: right;
-  }
+    position: relative;
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background-color: #e8491d;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+        background-color 0.6s;
+    }
+    &:hover::before {
+      transform: scaleY(1);
+      width: 100%;
+    }
 
-  .header-NavLink {
-    color: $color-white;
-    border-bottom: .2rem solid transparent;
-    display: block;
-    padding: 0 3rem;
-    text-align: center;
-    text-decoration: none;
-  }
+    .header-NavLink {
+      color: $color-white;
+      font-size: 1.2em;
+      border-bottom: 0.2rem solid transparent;
+      display: block;
+      padding: 0 4rem;
+      text-align: center;
+      text-decoration: none;
+      position: relative;
 
-  .header-NavLink:hover {
-    border-bottom: .2rem solid $color-red;
+      &:active,
+      &:hover {
+        color: $color-white !important;
+      }
+    }
   }
-
 }

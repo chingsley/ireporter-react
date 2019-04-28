@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SectionMainView component on the home page should render homepage correctly 1`] = `ShallowWrapper {}`;
+exports[`Test the SectionMainView component on the home page should render homepage correctly 1`] = `ShallowWrapper {}`;
