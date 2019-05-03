@@ -19,8 +19,8 @@
     "test"
   ],
   "scripts": {
-    "preinstallcmd": "rm -rf dist",
-    "postinstallcmd": "npm run build",
+    "preinstall": "rm -rf dist",
+    "postinstall": "npm run build",
     "build": "npm run build:prod",
     "build:dev": "webpack --env.mode development --open --hot",
     "build:prod": "webpack --env.mode production",
