@@ -4,7 +4,6 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
-// import { toast } from 'react-toastify';
 import { createNewReport } from '../actions/report';
 
 export class Report extends Component {

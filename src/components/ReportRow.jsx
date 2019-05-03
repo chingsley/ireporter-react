@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class TableRow extends Component {
+export class ReportRow extends Component {
   constructor(props) {
     super(props);
     const { report } = props;
@@ -54,8 +54,8 @@ export class TableRow extends Component {
   }
 }
 
-TableRow.propTypes = {
+ReportRow.propTypes = {
   report: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
 };
 
-export default TableRow;
+export default ReportRow;

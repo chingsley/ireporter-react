@@ -1,0 +1,32 @@
+.link {
+  text-decoration: none;
+  display: block;
+  color: $color-white;
+  position: relative; /*enables z-index to work*/
+  z-index: 10;
+  &:hover {
+    color: white;
+  }
+}
+.link-container {
+  width: 180px;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #e8491d;
+    transform: scaleY(0);
+    transition: transform .2s, width .4s cubic-bezier(1,0,0,1) .2s, background-color .6s;
+  }
+
+  &:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+}

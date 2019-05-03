@@ -1,5 +1,5 @@
 import React from 'react';
-import ReportRow from './TableRow';
+import ReportRow from './ReportRow';
 
 const report1 = {
   address: 'Winterfell',

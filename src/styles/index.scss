@@ -1,18 +1,23 @@
-@import './base/variables';
+@import './base/variables'; // This must be the first import otherwise the app will crash because some variables will be used before they are defined
 @import './base/base';
 
 @import './components/authForm';
-@import './components/header';
+@import './components/cardStory.scss';
+@import './components/cardSingleReport';
+@import './components/clickable';
+@import './components/footer';
 @import './components/googlemap';
+@import './components/header';
+@import './components/logo';
+@import './components/reportRow';
 @import './components/sectionMainView';
 @import './components/sectionWhatWeDo';
 @import './components/sectionOurStories';
-@import './components/cardStory.scss';
-@import './components/footer';
-@import './components/logo';
 
 @import './pages/createReport';
 @import './pages/pageHomePage';
+@import './pages/pageViewAllReports';
+@import './pages/pageUserProfile';
 
 @import './utilities/loader';
 @import './utilities/toaster';
