@@ -1,24 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import CardSingleReport from './CardSingleReport';
 
-const ViewAllReports = () => (
-  <div className="all-reports-container">
-    <CardSingleReport
-      imgSrc="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1548974192/ncj4ltjvtepev3fqjkf1.jpg"
-    />
-    <CardSingleReport
-      imgSrc="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1548918888/btaftrjb7zhxhdsb2wbg.jpg"
-      status="resolved"
-    />
-    <CardSingleReport
-      imgSrc="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1548918563/stanzapqxbml87m5brva.jpg"
-      status="under-investigation"
-    />
-    <CardSingleReport
-      imgSrc="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1556371216/sklohp88foupfeuw1yyi.jpg"
-      status="rejected"
-    />
-  </div>
-);
+export class ViewAllReports extends Component {
+  async componentDidMount() {
+    const { isLoggedIn, history } = this.props;
+    if (!isLoggedIn) {
+      history.push('/login');
+    }
+  }
 
-export default ViewAllReports;
+
+  render() {
+    const { userReports } = this.props;
+    return (
+      <div className="all-reports-container">
+        {userReports
+          // eslint-disable-next-line max-len
+          .sort((a, b) => b.id - a.id) // inverted sort so that the most recent report (the last to be added) will be displayed first
+          .map(report => (
+            <CardSingleReport
+              image="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1548918888/btaftrjb7zhxhdsb2wbg.jpg" // change to {report.image}
+              status={report.status}
+              comment={report.comment}
+            />
+          ))}
+      </div>
+    );
+  }
+}
+
+ViewAllReports.propTypes = {
+  history: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
+  userReports: PropTypes.instanceOf(Array).isRequired,
+  isLoggedIn: PropTypes.bool,
+};
+
+ViewAllReports.defaultProps = {
+  isLoggedIn: false,
+};
+
+const mapStateToProps = state => ({
+  fetching: state.fetchStatus.fetching,
+  isLoggedIn: state.auth.isLoggedIn,
+  userReports: state.report.userReports,
+});
+
+export default connect(mapStateToProps, {})(ViewAllReports);

@@ -1,8 +1,11 @@
 import actionType from '../actions/types';
+import { getCurrentUser } from '../utilities/localStorage';
+
+const currentUser = getCurrentUser();
 
 const initialState = {
-  isLoggedIn: false,
-  user: {},
+  isLoggedIn: !!currentUser,
+  user: currentUser || {},
 };
 
 export default (state = initialState, action) => {
@@ -18,6 +21,12 @@ export default (state = initialState, action) => {
         ...state,
         isLoggedIn: true,
         user: action.user,
+      };
+    case actionType.LOGOUT:
+      return {
+        ...state,
+        isLoggedIn: false,
+        user: {},
       };
     default:
       return state;

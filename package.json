@@ -28,7 +28,7 @@
     "start:prod": "node server.js",
     "start": "node server.js",
     "webpack": "webpack",
-    "lint": "eslint . --ext .js,.jsx && npm run sass-lint",
+    "lint": "eslint . --ext .js,.jsx",
     "sass-lint": "sass-lint 'src/**/*.scss' -q -v",
     "sass-lint:fix": "sass-lint-auto-fix",
     "lint:fix": "eslint --fix . --ext .js,.jsx && npm run sass-lint",

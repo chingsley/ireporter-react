@@ -1,11 +1,15 @@
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Logo from './Logo';
+import { logout } from '../actions/auth';
 
 const Header = (props) => {
-  const { isLoggedIn, isAdmin, className } = props;
+  const {
+    isLoggedIn, isAdmin, className, logout: handleLogout,
+  } = props;
+  const logoutUser = () => handleLogout();
   return (
     <header className={`header ${className}`}>
       <Logo className="header-logo" />
@@ -22,10 +26,11 @@ const Header = (props) => {
           {isLoggedIn
             && (
               <Fragment>
-                <li className="header-ul__li"><NavLink to="/" className="header-NavLink">logout</NavLink></li>
+                <li className="header-ul__li"><NavLink to="/" className="header-NavLink" onClick={logoutUser}>logout</NavLink></li>
                 <li className="header-ul__li"><NavLink to="/report/:id" activeClassName="is-active" className="header-NavLink">edit report</NavLink></li>
                 <li className="header-ul__li"><NavLink to="/reports" activeClassName="is-active" className="header-NavLink">my reports</NavLink></li>
                 <li className="header-ul__li"><NavLink to="/create_report" activeClassName="is-active" className="header-NavLink">new report</NavLink></li>
+                <li className="header-ul__li"><NavLink to="/profile" activeClassName="is-active" className="header-NavLink">my profile</NavLink></li>
               </Fragment>
             )
           }
@@ -50,9 +55,10 @@ Header.defaultProps = {
 };
 
 Header.propTypes = {
-  isLoggedIn: propTypes.bool,
-  isAdmin: propTypes.bool,
-  className: propTypes.string,
+  isLoggedIn: PropTypes.bool,
+  isAdmin: PropTypes.bool,
+  className: PropTypes.string,
+  logout: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, { logout })(Header);
