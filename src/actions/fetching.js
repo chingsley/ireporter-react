@@ -1,10 +1,10 @@
 import actionType from './types';
 
-export const startFetching = () => ({
+export const startDataFetching = () => ({
   type: actionType.START_FETCHING,
 });
 
-export const stopFetching = (fetched = true, message = '') => ({
+export const stopDataFetching = (fetched = true, message = '') => ({
   type: actionType.STOP_FETCHING,
   payload: {
     error: !fetched,
