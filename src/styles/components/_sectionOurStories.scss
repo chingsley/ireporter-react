@@ -1,11 +1,12 @@
 .section-stories {
-  // border: 1px solid blue;
   margin-top: 8em;
+  padding-bottom: 8em;
+  background-image: linear-gradient(to right, white, grey);
+
   
   &__title {
     color: $color-shaded-black;
     text-align: center;
-    // border: 1px solid black;
     font-size: 3.5em;
     letter-spacing: 0.3em;
   }
@@ -15,7 +16,6 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    // align-items: space-between;
     justify-content: space-around;
 
   }

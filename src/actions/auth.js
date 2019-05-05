@@ -17,7 +17,7 @@ export const authorise = (userData, loginOrSignup) => async (dispatch) => {
     const { token, user } = data.data[0];
     saveToken(token);
     const typeOfAction = loginOrSignup === 'login' ? actionType.LOG_IN : actionType.SIGN_UP;
-    saveUser('user', JSON.stringify(user));
+    saveUser(user);
     dispatch(signin(typeOfAction, user));
     dispatch(stopDataFetching());
     toast.success(`welcome ${user.firstname}`);

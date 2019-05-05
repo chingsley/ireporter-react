@@ -1,0 +1,7 @@
+.comment-and-media {
+  cursor: pointer;
+
+  &:hover {
+    color: $color-red;
+  }
+}

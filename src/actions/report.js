@@ -39,3 +39,26 @@ export const getUserReports = () => async (dispatch) => {
     handleError(dispatch, error);
   }
 };
+
+export const changeReportStatus = ({ id, status, type }) => async (dispatch) => {
+  dispatch(startDataFetching());
+  try {
+    const { data: { data } } = await axios.patch(`/${type}s/${id}/status`, { status });
+    const { record } = data[0];
+    const updatedReport = record[0];
+    const allReports = await getLocalReports().map((report) => {
+      if (report.id === updatedReport.id) {
+        return { ...report, ...updatedReport };
+      }
+      return report;
+    });
+    saveReports(allReports);
+    dispatch({
+      type: actionType.CHANGE_REPORT_STATUS,
+      payload: updatedReport,
+    });
+    dispatch(stopDataFetching());
+  } catch (error) {
+    handleError(dispatch, error);
+  }
+};

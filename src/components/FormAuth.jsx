@@ -1,7 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { toast } from 'react-toastify';
 import { authorise } from '../actions/auth';
 
 export class FormAuth extends Component {
@@ -23,14 +22,6 @@ export class FormAuth extends Component {
     this.history = props.history;
 
     this.onSubmit = this.onSubmit.bind(this);
-  }
-
-  componentDidMount() {
-    const { isLoggedIn, fetching } = this.props;
-    if (!fetching && isLoggedIn) {
-      toast.info('You are currently signed signed in');
-      this.history.push('/');
-    }
   }
 
   async onSubmit(e) {

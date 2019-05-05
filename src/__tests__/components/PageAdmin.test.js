@@ -34,6 +34,15 @@ const wrap = () => {
     },
     report: {
       report: {},
+      userReports: [
+        {
+          id: 1, comment: 'some comments here', location: '1.2, 2.1', status: 'draft', createdOn: Date.now(),
+        },
+        {
+          id: 2, comment: 'some comments here', location: '1.2, 2.1', status: 'draft', createdOn: Date.now(),
+        },
+
+      ],
     },
   });
 
@@ -54,12 +63,12 @@ describe('Test the admin page', () => {
   const { mountWrapper: wrapper } = wrap();
   it('should render with the correct elements', () => {
     // expect(wrapper.find('.header ').exists()).toBe(true);
-    expect(wrapper.find('div.row-1-of-3').exists()).toBe(true);
+    expect(wrapper.find('.admin-page').exists()).toBe(true);
     expect(wrapper.find('.table-admin').exists()).toBe(true);
     expect(wrapper.find('.row').exists()).toBe(true);
     expect(wrapper.find('.cell').exists()).toBe(true);
-    // expect(wrapper.find('.header-NavLink').exists()).toBe(true);
-    // expect(wrapper.find('input.report-form__input').exists()).toBe(true);
+    expect(wrapper.find('.admin-page__table-wrapper').exists()).toBe(true);
+    expect(wrapper.find('.admin-page__table-wrapper--table-header').exists()).toBe(true);
     // expect(wrapper.find('textarea.report-form__input-textarea').exists()).toBe(true);
     // expect(wrapper.find('button.report-form__button').exists()).toBe(true);
   });

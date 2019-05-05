@@ -21,6 +21,7 @@ export class ViewAllReports extends Component {
           .sort((a, b) => b.id - a.id) // inverted sort so that the most recent report (the last to be added) will be displayed first
           .map(report => (
             <CardSingleReport
+              key={report.id}
               image="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1548918888/btaftrjb7zhxhdsb2wbg.jpg" // change to {report.image}
               status={report.status}
               comment={report.comment}

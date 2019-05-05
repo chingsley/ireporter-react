@@ -1,11 +1,9 @@
 import actionType from '../actions/types';
 import { getCurrentUser } from '../utilities/localStorage';
 
-const currentUser = getCurrentUser();
-
 const initialState = {
-  isLoggedIn: !!currentUser,
-  user: currentUser || {},
+  isLoggedIn: !!getCurrentUser(),
+  user: getCurrentUser() || {},
 };
 
 export default (state = initialState, action) => {
