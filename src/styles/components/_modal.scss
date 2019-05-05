@@ -1,0 +1,73 @@
+.Overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  opacity: 0.98;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.Modal {
+  background-color: rgba(255, 255, 255, 0.9);
+  outline: none;
+  align-items: center;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  min-height: 50%;
+  justify-content: center;
+  width: 60em;
+  position: relative;
+}
+
+.container-modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-container {
+  padding: 1em;
+  margin: 10px 10px;
+  margin-bottom: 2rem;
+  display: flex;
+  width:  60em;
+
+  &__img {
+    display: block;
+  }
+
+  &__text {
+    margin-left: 1em;
+    color: $color-shaded-black;
+    border-left: 2px solid $color-red;
+    padding:  0 1em;
+  }
+}
+
+.btn-modal {
+  margin: 0 auto;
+  text-transform: uppercase;
+  transform: scale(2);
+  padding: 5px;
+  position: absolute;
+  top: 0.8em;
+  right:  0.8em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  // color: rgba(0, 0, 0, 0.5);
+  color: $color-red;
+
+  &:hover {
+    // color: rgba(0, 0, 0, 1);
+    color: red;
+  }
+}

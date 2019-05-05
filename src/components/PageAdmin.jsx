@@ -3,30 +3,12 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ReportRow from './ReportRow';
 
-const report1 = {
-  address: 'Winterfell',
-  coordinates: '2392, 298202',
-  comment: 'We want to report corruption',
-  images: '',
-  videos: '',
-  status: 'draft',
-  type: 'red-flag',
-  createdon: Date.now(),
-  createdby: 'James',
-};
-const report2 = {
-  address: 'Volaris',
-  coordinates: '02902939, 248230',
-  comment: 'We need some help here',
-  images: '',
-  videos: '',
-  status: 'draft',
-  type: 'red-flag',
-  createdon: Date.now(),
-  createdby: 'John',
-};
-const { log } = console;
 export class AdminPage extends Component {
+  constructor(props) {
+    super(props);
+    this.history = props.history;
+  }
+
   async componentDidMount() {
     const { isLoggedIn, history } = this.props;
     if (!isLoggedIn) {
@@ -34,30 +16,32 @@ export class AdminPage extends Component {
     }
   }
 
-  changeReportStatus() {
-    const { userReports } = this.props;
-    log(userReports);
-  }
-
   render() {
+    const { userReports } = this.props;
     return (
-      <div className="row-1-of-3" id="table-wrapper">
-        <table className="table-admin" id="table-admin">
-          <tbody>
-            <tr className="row">
-              <td className="cell">ID</td>
-              <td className="cell">Type</td>
-              <td className="cell">Comment / Media</td>
-              <td className="cell">Location</td>
-              <td className="cell">Created on</td>
-              <td className="cell">Created by</td>
-              <td className="cell">Status</td>
-            </tr>
-            <ReportRow report={report1} />
-            <ReportRow report={report2} />
-          </tbody>
-        </table>
-      </div>
+      <section className="admin-page">
+        <div className="admin-page__table-wrapper">
+          <h2 className="admin-page__table-wrapper--table-header">MANAGE REPORTS</h2>
+          <table className="table-admin">
+            <tbody>
+              <tr className="row">
+                <td className="cell">ID</td>
+                <td className="cell">Type</td>
+                <td className="cell">Comment / Media</td>
+                <td className="cell">Location</td>
+                <td className="cell">Created on</td>
+                <td className="cell">Status</td>
+              </tr>
+              {userReports
+                // eslint-disable-next-line max-len
+                .sort((a, b) => b.id - a.id) // inverted sort so that the most recent report (the last to be added) will be displayed first
+                .map(report => (
+                  <ReportRow key={report.id} report={report} />
+                ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
     );
   }
 }

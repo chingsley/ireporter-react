@@ -23,11 +23,10 @@ const Header = (props) => {
             </Fragment>
             )
           }
-          {isLoggedIn
+          {isLoggedIn && !isAdmin
             && (
               <Fragment>
                 <li className="header-ul__li"><NavLink to="/" className="header-NavLink" onClick={logoutUser}>logout</NavLink></li>
-                <li className="header-ul__li"><NavLink to="/report/:id" activeClassName="is-active" className="header-NavLink">edit report</NavLink></li>
                 <li className="header-ul__li"><NavLink to="/reports" activeClassName="is-active" className="header-NavLink">my reports</NavLink></li>
                 <li className="header-ul__li"><NavLink to="/create_report" activeClassName="is-active" className="header-NavLink">new report</NavLink></li>
                 <li className="header-ul__li"><NavLink to="/profile" activeClassName="is-active" className="header-NavLink">my profile</NavLink></li>
@@ -35,7 +34,12 @@ const Header = (props) => {
             )
           }
           {(isLoggedIn && isAdmin)
-          && <li className="header-ul__li"><NavLink to="/admin_dashboard" activeClassName="is-active" className="header-NavLink">admin dashboard</NavLink></li>
+          && (
+            <>
+              <li className="header-ul__li"><NavLink to="/" className="header-NavLink" onClick={logoutUser}>logout</NavLink></li>
+              <li className="header-ul__li"><NavLink to="/admin_dashboard" activeClassName="is-active" className="header-NavLink">admin dashboard</NavLink></li>
+            </>
+          )
           }
         </ul>
       </div>

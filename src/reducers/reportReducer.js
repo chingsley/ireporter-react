@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 import actionType from '../actions/types';
 import { getLocalReports } from '../utilities/localStorage';
 
@@ -5,6 +6,7 @@ const {
   MAKE_NEW_REPORT,
   GET_USER_REPORTS,
   LOGOUT,
+  CHANGE_REPORT_STATUS,
 } = actionType;
 
 const initialState = {
@@ -24,6 +26,20 @@ export default (state = initialState, action) => {
       return {
         ...state,
         userReports: action.payload,
+      };
+    case CHANGE_REPORT_STATUS:
+      const updatedReports = state.userReports.map((report) => {
+        if (report.id === action.payload.id) {
+          return {
+            ...report,
+            ...action.payload,
+          };
+        }
+        return report;
+      });
+      return {
+        ...state,
+        userReports: updatedReports,
       };
     case LOGOUT:
       return {

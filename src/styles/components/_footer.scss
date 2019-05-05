@@ -1,7 +1,6 @@
 .section-footer {
   height: 50vh;
   background-color: $color-shaded-black;
-  margin-top: 10em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,8 +39,12 @@
           color: $color-white;
           
           & > .footer-link {
-            color: $color-white;
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
+
+            &:hover {
+              color: white;
+            }
           }
         }
       }
@@ -50,10 +53,13 @@
     &__right {
       width: 40em;
       border-top: 1px solid $color-red;
-      color: $color-white;
+      color: rgba(255, 255, 255, 0.7);
       letter-spacing: 0.1em;
-      font-style: italic;
     }
   }
+}
+
+.footer-link {
+  color: $color-white;
 }
 
