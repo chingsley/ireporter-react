@@ -39,7 +39,7 @@ ViewModal.propTypes = {
 
 ViewModal.defaultProps = {
   displayModal: false,
-  image: 'https://res.cloudinary.com/dmx0a3nqi/image/upload/v1548860481/n33lxvcmj02bdidfyqbz.webp',
+  image: 'https://via.placeholder.com/700x400',
   comment: 'No comments provied',
 };
 

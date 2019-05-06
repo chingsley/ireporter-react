@@ -3,7 +3,6 @@ import React from 'react';
 import {
   BrowserRouter, Route, Switch,
 } from 'react-router-dom';
-import { ToastContainer, Flip } from 'react-toastify';
 import { connect } from 'react-redux';
 import AdminPage from '../components/PageAdmin';
 import CreateReportPage from '../components/PageCreateReport';
@@ -18,13 +17,15 @@ import PageViewAllReports from '../components/PageViewAllReports';
 import Register from '../components/PageSignup';
 import UserProfile from '../components/PageUserProfile';
 
+import Alert from '../components/Alert';
+
 const AppRouter = (props) => {
   const { loading } = props;
   return (
     <BrowserRouter>
       {loading && <Loader />}
       <Header />
-      <ToastContainer transition={Flip} autoClose={2000} />
+      <Alert />
       <Switch>
         <Route path="/create_report" component={CreateReportPage} />
         <Route path="/report/:id" component={EditReportPage} />
@@ -44,12 +45,10 @@ const AppRouter = (props) => {
 
 const mapStateToProps = state => ({
   loading: state.fetchStatus.fetching,
-  // isLoggedIn: state.auth.isLoggedIn,
 });
 
 AppRouter.propTypes = {
   loading: propTypes.bool.isRequired,
-  // isLoggedIn: propTypes.bool.isRequired,
 };
 
 export default connect(mapStateToProps)(AppRouter);

@@ -1,9 +1,23 @@
-.all-reports-container {
-  padding: 2em 2em;
-  width: 80%;
-  margin: 0 auto;
+.user-page {
+  background-image: linear-gradient(to right, white, grey);
+  min-height: 100vh;
+  padding: 4em 0 4em;
 
-  // font-family: Georgia, "Times New Roman", Times, serif;
-  // font-size: 16px;
-  // font-style: italic;
+    &__table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    overflow-x: auto;
+
+    &--table-header {
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: inline-block;
+      transform: scale(1.6);
+      letter-spacing: 2px;
+      margin-bottom: 2em;
+      color: $color-shaded-black;
+    }
+  }
 }

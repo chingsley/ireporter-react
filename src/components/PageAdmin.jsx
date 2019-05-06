@@ -36,7 +36,7 @@ export class AdminPage extends Component {
                 // eslint-disable-next-line max-len
                 .sort((a, b) => b.id - a.id) // inverted sort so that the most recent report (the last to be added) will be displayed first
                 .map(report => (
-                  <ReportRow key={report.id} report={report} />
+                  <ReportRow key={report.id} report={report} client="admin" />
                 ))}
             </tbody>
           </table>
