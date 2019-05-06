@@ -1,9 +1,15 @@
+// eslint-disable-next-line max-len
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import CardSingleReport from './CardSingleReport';
+import ReportRow from './ReportRow';
 
-export class ViewAllReports extends Component {
+export class UserReportsPage extends Component {
+  constructor(props) {
+    super(props);
+    this.history = props.history;
+  }
+
   async componentDidMount() {
     const { isLoggedIn, history } = this.props;
     if (!isLoggedIn) {
@@ -11,34 +17,43 @@ export class ViewAllReports extends Component {
     }
   }
 
-
   render() {
-    const { userReports } = this.props;
+    const { userReports, history } = this.props;
     return (
-      <div className="all-reports-container">
-        {userReports
-          // eslint-disable-next-line max-len
-          .sort((a, b) => b.id - a.id) // inverted sort so that the most recent report (the last to be added) will be displayed first
-          .map(report => (
-            <CardSingleReport
-              key={report.id}
-              image="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1548918888/btaftrjb7zhxhdsb2wbg.jpg" // change to {report.image}
-              status={report.status}
-              comment={report.comment}
-            />
-          ))}
-      </div>
+      <section className="user-page">
+        <div className="user-page__table-wrapper">
+          <h2 className="user-page__table-wrapper--table-header">MY REPORTS</h2>
+          <table className="table-user">
+            <tbody>
+              <tr className="row">
+                <td className="cell">ID</td>
+                <td className="cell">Type</td>
+                <td className="cell">Comment / Media</td>
+                <td className="cell">Location</td>
+                <td className="cell">Created on</td>
+                <td className="cell">Status</td>
+                <td className="cell" />
+                <td className="cell" />
+              </tr>
+              {userReports
+                .sort((a, b) => b.id - a.id)
+                .map(report => (
+                  <ReportRow key={report.id} report={report} client="user" history={history} />
+                ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
     );
   }
 }
-
-ViewAllReports.propTypes = {
+UserReportsPage.propTypes = {
   history: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
   userReports: PropTypes.instanceOf(Array).isRequired,
   isLoggedIn: PropTypes.bool,
 };
 
-ViewAllReports.defaultProps = {
+UserReportsPage.defaultProps = {
   isLoggedIn: false,
 };
 
@@ -48,4 +63,4 @@ const mapStateToProps = state => ({
   userReports: state.report.userReports,
 });
 
-export default connect(mapStateToProps, {})(ViewAllReports);
+export default connect(mapStateToProps, {})(UserReportsPage);

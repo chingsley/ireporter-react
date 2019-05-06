@@ -1,25 +1,30 @@
-.table-admin {
+.table-admin,
+.table-user {
   width: 80%;
   margin: 0 auto;
   border-collapse: collapse;
 }
-.table-admin .row:not(:first-child) {
+.table-admin .row:not(:first-child),
+.table-user .row:not(:first-child) {
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   font-size: 1em;
   color: $color-shaded-black;
 }
-.table-admin .row:first-child {
+.table-admin .row:first-child,
+.table-user .row:first-child {
   background-color: $color-shaded-black;
   color: $color-white;
   height: 5em;
   text-align: center;
 }
-.table-admin tr:nth-child(odd) {
+.table-admin tr:nth-child(odd), 
+.table-user tr:nth-child(odd) {
   background-color: rgba(128, 128, 128, .2);
 }
-.table-admin .row .cell {
+.table-admin .row .cell,
+.table-user .row .cell {
   padding: 0 0.5rem 0 0.5rem;
   border: 1px solid $color-white;
 }
@@ -52,4 +57,20 @@
 
 .under-investigation {
   background-color: yellow;
+}
+
+.td-edit-report {
+  cursor: pointer;
+  background-color: $color-shaded-black;
+  color: $color-white;
+  border: 2px solid $color-white !important;
+
+  &:hover {
+    // color: $color-white;
+  }
+}
+
+.td-Delete-report {
+  cursor: pointer;
+  background-color: $color-red;
 }

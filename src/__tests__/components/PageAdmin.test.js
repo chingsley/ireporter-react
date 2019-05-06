@@ -36,10 +36,10 @@ const wrap = () => {
       report: {},
       userReports: [
         {
-          id: 1, comment: 'some comments here', location: '1.2, 2.1', status: 'draft', createdOn: Date.now(),
+          id: 1, comment: 'some comments here', location: '1.2, 2.1', status: 'draft', createdOn: Date.now(), Images: ['a-given-image.png'],
         },
         {
-          id: 2, comment: 'some comments here', location: '1.2, 2.1', status: 'draft', createdOn: Date.now(),
+          id: 2, comment: 'some comments here', location: '1.2, 2.1', status: 'draft', createdOn: Date.now(), Images: ['another-img.npn'],
         },
 
       ],

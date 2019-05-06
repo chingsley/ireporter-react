@@ -6,7 +6,7 @@ const {
   MAKE_NEW_REPORT,
   GET_USER_REPORTS,
   LOGOUT,
-  CHANGE_REPORT_STATUS,
+  EDIT_REPORT,
 } = actionType;
 
 const initialState = {
@@ -27,7 +27,7 @@ export default (state = initialState, action) => {
         ...state,
         userReports: action.payload,
       };
-    case CHANGE_REPORT_STATUS:
+    case EDIT_REPORT:
       const updatedReports = state.userReports.map((report) => {
         if (report.id === action.payload.id) {
           return {
