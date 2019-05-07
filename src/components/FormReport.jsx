@@ -96,16 +96,6 @@ export class Report extends Component {
             </div>
           </div>
         )}
-
-        {/* <input
-          type="text"
-          className="report-form__input"
-          id="address"
-          placeholder="Enter your address"
-          value={address}
-          onChange={e => this.setState({ address: e.target.value })}
-          required
-        /> */}
         <input
           type="text"
           className="report-form__input"

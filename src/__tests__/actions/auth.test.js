@@ -2,9 +2,6 @@
 // import mockAxios from 'axios';
 import { authorise } from '../../actions/auth';
 import axios from '../../services/axios';
-// import * as types from '../../actions/types';
-
-// const mockStore = configureStore([thunk]);
 
 const userData = {
   id: 48,
@@ -47,10 +44,6 @@ describe('authorise()', () => {
     jest.spyOn(axios, 'post').mockRejectedValue({});
     await authorise(userData, 'login')(dispatch);
     expect(dispatch).toHaveBeenCalledTimes(2);
-    // expect(dispatch.mock.calls[1][0]).toEqual({
-    //   user: userData,
-    //   type: 'LOG_IN',
-    // });
   });
 
   it('should throw an error for bad request', async () => {
@@ -64,25 +57,4 @@ describe('authorise()', () => {
       type: 'LOG_IN',
     });
   });
-
-  // it('should fail to login user if errors exist', () => {
-  //   mockAxios.post.mockImplementationOnce(() => Promise.reject({
-  //     response: { data: { success: false, errors: ['something went wrong'] } },
-  //   }));
-
-  //   const expected = [
-  //     {
-  //       type: types.START_FETCHING,
-  //     },
-  //     {
-  //       type: types.STOP_FETCHING,
-  //       payload: { error: true, message: ['something went wrong'] },
-  //     },
-  //   ];
-
-  //   const store = mockStore({ authReducer: {}, fetchReducer: {} });
-  //   return store.dispatch(authorise({ email: 'wrong@email.com', password: 'incorrect' })).then(() => {
-  //     expect(store.getActions()).toEqual(expected);
-  //   });
-  // });
 });
