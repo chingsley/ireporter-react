@@ -33,7 +33,7 @@ export class UserReportsPage extends Component {
                 <td className="cell">Created on</td>
                 <td className="cell">Status</td>
                 <td className="cell" />
-                <td className="cell" />
+                {/* <td className="cell" /> */}
               </tr>
               {userReports
                 .sort((a, b) => b.id - a.id)
