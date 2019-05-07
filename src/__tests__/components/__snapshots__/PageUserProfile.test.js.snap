@@ -1,0 +1,242 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the report form should render with the correct elements 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "2tjq9k",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "2tjq9k",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(ProfilePage)
+        authorise={[MockFunction]}
+        fetching={false}
+        formType="signup"
+        history={
+          Object {
+            "location": Object {
+              "pathname": "",
+            },
+            "push": [MockFunction],
+          }
+        }
+        isLoggedIn={false}
+      >
+        <ProfilePage
+          authorise={[MockFunction]}
+          fetching={false}
+          formType="signup"
+          history={
+            Object {
+              "location": Object {
+                "pathname": "",
+              },
+              "push": [MockFunction],
+            }
+          }
+          isLoggedIn={true}
+          userReports={
+            Array [
+              Object {
+                "Images": Array [
+                  "a-given-image.png",
+                ],
+                "comment": "some comments here",
+                "createdOn": 1557195727187,
+                "id": 1,
+                "location": "1.2, 2.1",
+                "status": "draft",
+              },
+              Object {
+                "Images": Array [
+                  "another-img.npn",
+                ],
+                "comment": "some comments here",
+                "createdOn": 1557195727187,
+                "id": 2,
+                "location": "1.2, 2.1",
+                "status": "draft",
+              },
+            ]
+          }
+        >
+          <section
+            className="section-profile"
+          >
+            <div
+              className="section-profile-wrapper"
+            >
+              <div
+                className="profile-div"
+              >
+                <h4
+                  id="date"
+                >
+                  place date and time here
+                </h4>
+                <div
+                  className="div-profile-content div-profile-content-title"
+                >
+                  PROFILE
+                </div>
+                <div
+                  className="div-profile-content div-profile-content-picture u-margin-top-small"
+                >
+                  <div
+                    className="piture-div-img"
+                  >
+                    <img
+                      alt="profile"
+                      src="img/lion-3576045_1920.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="div-profile-content div-profile-content-userdetails"
+                >
+                  <p
+                    className="fullname"
+                  >
+                    Julia James Junior
+                  </p>
+                  <h4
+                    className="telephone"
+                  >
+                    jj-junior@gmail.com
+                  </h4>
+                </div>
+                <div
+                  className="div-profile-content div-profile-content-flexbox u-margin-top-small"
+                >
+                  <div
+                    className="flex-child redflag"
+                  >
+                    <h4>
+                      50
+                    </h4>
+                    <p>
+                      RED-FLAGS
+                    </p>
+                  </div>
+                  <div
+                    className="flex-child incidence"
+                  >
+                    <h4>
+                      45
+                    </h4>
+                    <p>
+                      INCIDENCES
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="div-profile-content div-profile-content-flexbox u-margin-top-small"
+                >
+                  <div
+                    className="flex-child stats redflag-stats"
+                  >
+                    <ul>
+                      <li>
+                        10 Draft
+                      </li>
+                      <li>
+                        15 Rejected
+                      </li>
+                      <li>
+                        14 Resolved
+                      </li>
+                      <li>
+                        11 Under Investigation
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className="flex-child stats incidence-stats"
+                  >
+                    <ul>
+                      <li>
+                        10 Draft
+                      </li>
+                      <li>
+                        10 Rejected
+                      </li>
+                      <li>
+                        14 Resolved
+                      </li>
+                      <li>
+                        11 Under Investigation
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  className="div-profile-content div-profile-content-flexbox u-margin-top-small"
+                  id="div-profile-content-flexbox-username-part"
+                >
+                  <div
+                    className="flex-child"
+                    id="pic-for-username"
+                  >
+                    <img
+                      alt="profile"
+                      src="img/lion-3576045_1920.jpg"
+                    />
+                  </div>
+                  <div
+                    className="flex-child"
+                    id="profile-username"
+                  >
+                    <h3>
+                      JuliaJ95Jnr
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </ProfilePage>
+      </Connect(ProfilePage)>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;

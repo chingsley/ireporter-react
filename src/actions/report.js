@@ -15,7 +15,7 @@ export const createNewReport = reportData => async (dispatch) => {
     Object.keys(reportData).forEach(key => form.append(key, reportData[key]));
     const token = getToken();
     const { data } = await axios.post(
-      `http://localhost:3000/api/v1/${reportData.type}`,
+      `/${reportData.type}`,
       form,
       {
         headers: {
@@ -104,7 +104,6 @@ export const editReport = ({
     dispatch(stopDataFetching());
     await alertUser('successfully saved!', 'success');
     setTimeout(() => {
-      // window.location.reload(true);
       window.location.href = '/reports';
     }, 6000);
   } catch (error) {

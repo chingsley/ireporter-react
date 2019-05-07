@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test login/signup form should allow users fill the form 1`] = `
+<FormAuth
+  authorise={[MockFunction]}
+  fetching={false}
+  formType="signup"
+  isLoggedIn={false}
+>
+  <div
+    className="container"
+  >
+    <form
+      className="container__form"
+      onSubmit={[Function]}
+    >
+      <input
+        className="container__form-input"
+        id="email"
+        onChange={[Function]}
+        placeholder="email"
+        required={true}
+        type="email"
+        value=""
+      />
+      <input
+        className="container__form-input"
+        id="password"
+        onChange={[Function]}
+        placeholder="password"
+        required={true}
+        type="text"
+        value=""
+      />
+      <input
+        className="container__form-input"
+        id="firstname"
+        onChange={[Function]}
+        placeholder="first name"
+        required={true}
+        type="text"
+        value=""
+      />
+      <input
+        className="container__form-input"
+        id="lastname"
+        onChange={[Function]}
+        placeholder="last name"
+        required={true}
+        type="text"
+        value=""
+      />
+      <input
+        className="container__form-input"
+        id="othernames"
+        onChange={[Function]}
+        placeholder="other names"
+        type="text"
+        value=""
+      />
+      <input
+        className="container__form-input"
+        id="username"
+        onChange={[Function]}
+        placeholder="username"
+        type="text"
+        value=""
+      />
+      <input
+        className="container__form-input"
+        id="phonenumber"
+        onChange={[Function]}
+        placeholder="phone number"
+        required={true}
+        type="text"
+        value=""
+      />
+      <input
+        className="container__form-input"
+        id="adminSecret"
+        onChange={[Function]}
+        placeholder="admin secret key"
+        type="text"
+        value=""
+      />
+      <button
+        className="container__form-btn"
+        id="btn-reg"
+        type="submit"
+      >
+        REGISTER
+      </button>
+    </form>
+  </div>
+</FormAuth>
+`;

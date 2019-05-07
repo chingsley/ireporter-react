@@ -1,0 +1,526 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the admin page should render with the correct elements 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "19voov",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "19voov",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(UserReportsPage)
+        className=""
+        history={
+          Object {
+            "location": Object {
+              "pathname": "",
+            },
+            "push": [MockFunction],
+          }
+        }
+        isAdmin={false}
+        isLoggedIn={false}
+      >
+        <UserReportsPage
+          className=""
+          fetching={false}
+          history={
+            Object {
+              "location": Object {
+                "pathname": "",
+              },
+              "push": [MockFunction],
+            }
+          }
+          isAdmin={false}
+          isLoggedIn={true}
+          userReports={
+            Array [
+              Object {
+                "Images": Array [
+                  "another-img.npn",
+                ],
+                "comment": "some comments here",
+                "createdOn": 1557195726465,
+                "id": 2,
+                "location": "1.2, 2.1",
+                "status": "draft",
+              },
+              Object {
+                "Images": Array [
+                  "a-given-image.png",
+                ],
+                "comment": "some comments here",
+                "createdOn": 1557195726465,
+                "id": 1,
+                "location": "1.2, 2.1",
+                "status": "draft",
+              },
+            ]
+          }
+        >
+          <section
+            className="user-page"
+          >
+            <div
+              className="user-page__table-wrapper"
+            >
+              <h2
+                className="user-page__table-wrapper--table-header"
+              >
+                MY REPORTS
+              </h2>
+              <table
+                className="table-user"
+              >
+                <tbody>
+                  <tr
+                    className="row"
+                  >
+                    <td
+                      className="cell"
+                    >
+                      ID
+                    </td>
+                    <td
+                      className="cell"
+                    >
+                      Type
+                    </td>
+                    <td
+                      className="cell"
+                    >
+                      Comment / Media
+                    </td>
+                    <td
+                      className="cell"
+                    >
+                      Location
+                    </td>
+                    <td
+                      className="cell"
+                    >
+                      Created on
+                    </td>
+                    <td
+                      className="cell"
+                    >
+                      Status
+                    </td>
+                    <td
+                      className="cell"
+                    />
+                    <td
+                      className="cell"
+                    />
+                  </tr>
+                  <Connect(ReportRow)
+                    client="user"
+                    history={
+                      Object {
+                        "location": Object {
+                          "pathname": "",
+                        },
+                        "push": [MockFunction],
+                      }
+                    }
+                    key="2"
+                    report={
+                      Object {
+                        "Images": Array [
+                          "another-img.npn",
+                        ],
+                        "comment": "some comments here",
+                        "createdOn": 1557195726465,
+                        "id": 2,
+                        "location": "1.2, 2.1",
+                        "status": "draft",
+                      }
+                    }
+                  >
+                    <ReportRow
+                      changeReportStatus={[Function]}
+                      client="user"
+                      fetching={false}
+                      history={
+                        Object {
+                          "location": Object {
+                            "pathname": "",
+                          },
+                          "push": [MockFunction],
+                        }
+                      }
+                      isLoggedIn={true}
+                      report={
+                        Object {
+                          "Images": Array [
+                            "another-img.npn",
+                          ],
+                          "comment": "some comments here",
+                          "createdOn": 1557195726465,
+                          "id": 2,
+                          "location": "1.2, 2.1",
+                          "status": "draft",
+                        }
+                      }
+                    >
+                      <ViewModal
+                        closeModal={[Function]}
+                        comment="some comments here"
+                        displayModal={false}
+                        image="another-img.npn"
+                      >
+                        <Modal
+                          ariaHideApp={false}
+                          bodyOpenClassName="ReactModal__Body--open"
+                          className="Modal"
+                          closeTimeoutMS={0}
+                          contentLabel="Modal Option"
+                          isOpen={false}
+                          overlayClassName="Overlay"
+                          parentSelector={[Function]}
+                          portalClassName="ReactModalPortal"
+                          role="dialog"
+                          shouldCloseOnEsc={true}
+                          shouldCloseOnOverlayClick={true}
+                          shouldFocusAfterRender={true}
+                          shouldReturnFocusAfterClose={true}
+                        >
+                          <Portal
+                            containerInfo={
+                              <div
+                                class="ReactModalPortal"
+                              />
+                            }
+                          >
+                            <ModalPortal
+                              ariaHideApp={false}
+                              bodyOpenClassName="ReactModal__Body--open"
+                              className="Modal"
+                              closeTimeoutMS={0}
+                              contentLabel="Modal Option"
+                              defaultStyles={
+                                Object {
+                                  "content": Object {
+                                    "WebkitOverflowScrolling": "touch",
+                                    "background": "#fff",
+                                    "border": "1px solid #ccc",
+                                    "borderRadius": "4px",
+                                    "bottom": "40px",
+                                    "left": "40px",
+                                    "outline": "none",
+                                    "overflow": "auto",
+                                    "padding": "20px",
+                                    "position": "absolute",
+                                    "right": "40px",
+                                    "top": "40px",
+                                  },
+                                  "overlay": Object {
+                                    "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "fixed",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                }
+                              }
+                              isOpen={false}
+                              overlayClassName="Overlay"
+                              parentSelector={[Function]}
+                              portalClassName="ReactModalPortal"
+                              role="dialog"
+                              shouldCloseOnEsc={true}
+                              shouldCloseOnOverlayClick={true}
+                              shouldFocusAfterRender={true}
+                              shouldReturnFocusAfterClose={true}
+                              style={
+                                Object {
+                                  "content": Object {},
+                                  "overlay": Object {},
+                                }
+                              }
+                            />
+                          </Portal>
+                        </Modal>
+                      </ViewModal>
+                      <tr
+                        className="row"
+                      >
+                        <td
+                          className="cell id"
+                        >
+                          2
+                        </td>
+                        <td
+                          className="cell type"
+                        />
+                        <td
+                          className="cell comment-and-media"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="presentation"
+                        >
+                          some comme...
+                        </td>
+                        <td
+                          className="cell location"
+                        >
+                          1.2, 2.1
+                        </td>
+                        <td
+                          className="cell createdon"
+                        >
+                          5571957264
+                        </td>
+                        <td
+                          className="cell status client-view-draft"
+                        >
+                          draft
+                        </td>
+                        <td
+                          className="cell td-edit-report"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="presentation"
+                        >
+                          Edit
+                        </td>
+                        <td
+                          className="cell td-Delete-report"
+                        >
+                          X
+                        </td>
+                      </tr>
+                    </ReportRow>
+                  </Connect(ReportRow)>
+                  <Connect(ReportRow)
+                    client="user"
+                    history={
+                      Object {
+                        "location": Object {
+                          "pathname": "",
+                        },
+                        "push": [MockFunction],
+                      }
+                    }
+                    key="1"
+                    report={
+                      Object {
+                        "Images": Array [
+                          "a-given-image.png",
+                        ],
+                        "comment": "some comments here",
+                        "createdOn": 1557195726465,
+                        "id": 1,
+                        "location": "1.2, 2.1",
+                        "status": "draft",
+                      }
+                    }
+                  >
+                    <ReportRow
+                      changeReportStatus={[Function]}
+                      client="user"
+                      fetching={false}
+                      history={
+                        Object {
+                          "location": Object {
+                            "pathname": "",
+                          },
+                          "push": [MockFunction],
+                        }
+                      }
+                      isLoggedIn={true}
+                      report={
+                        Object {
+                          "Images": Array [
+                            "a-given-image.png",
+                          ],
+                          "comment": "some comments here",
+                          "createdOn": 1557195726465,
+                          "id": 1,
+                          "location": "1.2, 2.1",
+                          "status": "draft",
+                        }
+                      }
+                    >
+                      <ViewModal
+                        closeModal={[Function]}
+                        comment="some comments here"
+                        displayModal={false}
+                        image="a-given-image.png"
+                      >
+                        <Modal
+                          ariaHideApp={false}
+                          bodyOpenClassName="ReactModal__Body--open"
+                          className="Modal"
+                          closeTimeoutMS={0}
+                          contentLabel="Modal Option"
+                          isOpen={false}
+                          overlayClassName="Overlay"
+                          parentSelector={[Function]}
+                          portalClassName="ReactModalPortal"
+                          role="dialog"
+                          shouldCloseOnEsc={true}
+                          shouldCloseOnOverlayClick={true}
+                          shouldFocusAfterRender={true}
+                          shouldReturnFocusAfterClose={true}
+                        >
+                          <Portal
+                            containerInfo={
+                              <div
+                                class="ReactModalPortal"
+                              />
+                            }
+                          >
+                            <ModalPortal
+                              ariaHideApp={false}
+                              bodyOpenClassName="ReactModal__Body--open"
+                              className="Modal"
+                              closeTimeoutMS={0}
+                              contentLabel="Modal Option"
+                              defaultStyles={
+                                Object {
+                                  "content": Object {
+                                    "WebkitOverflowScrolling": "touch",
+                                    "background": "#fff",
+                                    "border": "1px solid #ccc",
+                                    "borderRadius": "4px",
+                                    "bottom": "40px",
+                                    "left": "40px",
+                                    "outline": "none",
+                                    "overflow": "auto",
+                                    "padding": "20px",
+                                    "position": "absolute",
+                                    "right": "40px",
+                                    "top": "40px",
+                                  },
+                                  "overlay": Object {
+                                    "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "fixed",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                }
+                              }
+                              isOpen={false}
+                              overlayClassName="Overlay"
+                              parentSelector={[Function]}
+                              portalClassName="ReactModalPortal"
+                              role="dialog"
+                              shouldCloseOnEsc={true}
+                              shouldCloseOnOverlayClick={true}
+                              shouldFocusAfterRender={true}
+                              shouldReturnFocusAfterClose={true}
+                              style={
+                                Object {
+                                  "content": Object {},
+                                  "overlay": Object {},
+                                }
+                              }
+                            />
+                          </Portal>
+                        </Modal>
+                      </ViewModal>
+                      <tr
+                        className="row"
+                      >
+                        <td
+                          className="cell id"
+                        >
+                          1
+                        </td>
+                        <td
+                          className="cell type"
+                        />
+                        <td
+                          className="cell comment-and-media"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="presentation"
+                        >
+                          some comme...
+                        </td>
+                        <td
+                          className="cell location"
+                        >
+                          1.2, 2.1
+                        </td>
+                        <td
+                          className="cell createdon"
+                        >
+                          5571957264
+                        </td>
+                        <td
+                          className="cell status client-view-draft"
+                        >
+                          draft
+                        </td>
+                        <td
+                          className="cell td-edit-report"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="presentation"
+                        >
+                          Edit
+                        </td>
+                        <td
+                          className="cell td-Delete-report"
+                        >
+                          X
+                        </td>
+                      </tr>
+                    </ReportRow>
+                  </Connect(ReportRow)>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </UserReportsPage>
+      </Connect(UserReportsPage)>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;

@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the report form should render with the correct elements 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "66z9rk",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "66z9rk",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <SignUpPage
+        authorise={[MockFunction]}
+        fetching={false}
+        formType="signup"
+        history={
+          Object {
+            "location": Object {
+              "pathname": "",
+            },
+            "push": [MockFunction],
+          }
+        }
+        isLoggedIn={false}
+      >
+        <Connect(FormAuth)
+          authorise={[MockFunction]}
+          fetching={false}
+          formType="signup"
+          history={
+            Object {
+              "location": Object {
+                "pathname": "",
+              },
+              "push": [MockFunction],
+            }
+          }
+          isLoggedIn={false}
+        >
+          <FormAuth
+            authorise={[Function]}
+            fetching={false}
+            formType="signup"
+            history={
+              Object {
+                "location": Object {
+                  "pathname": "",
+                },
+                "push": [MockFunction],
+              }
+            }
+            isLoggedIn={true}
+          >
+            <div
+              className="container"
+            >
+              <form
+                className="container__form"
+                onSubmit={[Function]}
+              >
+                <input
+                  className="container__form-input"
+                  id="email"
+                  onChange={[Function]}
+                  placeholder="email"
+                  required={true}
+                  type="email"
+                  value=""
+                />
+                <input
+                  className="container__form-input"
+                  id="password"
+                  onChange={[Function]}
+                  placeholder="password"
+                  required={true}
+                  type="text"
+                  value=""
+                />
+                <input
+                  className="container__form-input"
+                  id="firstname"
+                  onChange={[Function]}
+                  placeholder="first name"
+                  required={true}
+                  type="text"
+                  value=""
+                />
+                <input
+                  className="container__form-input"
+                  id="lastname"
+                  onChange={[Function]}
+                  placeholder="last name"
+                  required={true}
+                  type="text"
+                  value=""
+                />
+                <input
+                  className="container__form-input"
+                  id="othernames"
+                  onChange={[Function]}
+                  placeholder="other names"
+                  type="text"
+                  value=""
+                />
+                <input
+                  className="container__form-input"
+                  id="username"
+                  onChange={[Function]}
+                  placeholder="username"
+                  type="text"
+                  value=""
+                />
+                <input
+                  className="container__form-input"
+                  id="phonenumber"
+                  onChange={[Function]}
+                  placeholder="phone number"
+                  required={true}
+                  type="text"
+                  value=""
+                />
+                <input
+                  className="container__form-input"
+                  id="adminSecret"
+                  onChange={[Function]}
+                  placeholder="admin secret key"
+                  type="text"
+                  value=""
+                />
+                <button
+                  className="container__form-btn"
+                  id="btn-reg"
+                  type="submit"
+                >
+                  REGISTER
+                </button>
+              </form>
+            </div>
+          </FormAuth>
+        </Connect(FormAuth)>
+      </SignUpPage>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
