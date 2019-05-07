@@ -24,7 +24,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "pnhtgl",
+              "key": "a3kqj3",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -38,7 +38,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "pnhtgl",
+            "key": "a3kqj3",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -98,12 +98,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
                   type="radio"
                   value="red-flags"
                 />
-                <label
-                  htmlFor="redflag"
-                  id="label-redflag"
-                >
-                  redflag
-                </label>
+                redflag
               </div>
               <div
                 className="report-form__radio-container--inner-container"
@@ -117,12 +112,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
                   type="radio"
                   value="interventions"
                 />
-                <label
-                  htmlFor="intervention"
-                  id="label-intervention"
-                >
-                  intervention
-                </label>
+                intervention
               </div>
             </div>
             <input

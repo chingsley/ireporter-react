@@ -81,8 +81,7 @@ export class Report extends Component {
                 value="red-flags"
                 onClick={e => this.setState({ type: e.target.value })}
                 required
-              />
-              <label htmlFor="redflag" id="label-redflag">redflag</label>
+              />redflag
             </div>
             <div className="report-form__radio-container--inner-container">
               <input
@@ -93,8 +92,7 @@ export class Report extends Component {
                 value="interventions"
                 onClick={e => this.setState({ type: e.target.value })}
                 required
-              />
-              <label htmlFor="intervention" id="label-intervention">intervention</label>
+              />intervention
             </div>
           </div>
         )}

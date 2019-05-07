@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -14,13 +15,15 @@ const Header = (props) => {
     <header className={`header ${className}`}>
       <Logo className="header-logo" />
       <div className="header-inner-wrapper">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
         <ul className="header-ul">
           {!isLoggedIn
             && (
-            <Fragment>
-              <li className="header-ul__li"><NavLink to="/login" activeClassName="is-active" className="header-NavLink">sign in</NavLink></li>
-              <li className="header-ul__li"><NavLink to="/signup" activeClassName="is-active" className="header-NavLink">sign up</NavLink></li>
-            </Fragment>
+              <Fragment>
+                <li className="header-ul__li"><NavLink to="/login" activeClassName="is-active" className="header-NavLink">sign in</NavLink></li>
+                <li className="header-ul__li"><NavLink to="/signup" activeClassName="is-active" className="header-NavLink">sign up</NavLink></li>
+              </Fragment>
             )
           }
           {isLoggedIn && !isAdmin
@@ -29,19 +32,25 @@ const Header = (props) => {
                 <li className="header-ul__li"><NavLink to="/" className="header-NavLink" onClick={logoutUser}>logout</NavLink></li>
                 <li className="header-ul__li"><NavLink to="/reports" activeClassName="is-active" className="header-NavLink">my reports</NavLink></li>
                 <li className="header-ul__li"><NavLink to="/create_report" activeClassName="is-active" className="header-NavLink">new report</NavLink></li>
-                <li className="header-ul__li"><NavLink to="/profile" activeClassName="is-active" className="header-NavLink">my profile</NavLink></li>
+                {/* <li className="header-ul__li"><NavLink to="/profile" activeClassName="is-active" className="header-NavLink">my profile</NavLink></li> */}
               </Fragment>
             )
           }
           {(isLoggedIn && isAdmin)
-          && (
-            <>
-              <li className="header-ul__li"><NavLink to="/" className="header-NavLink" onClick={logoutUser}>logout</NavLink></li>
-              <li className="header-ul__li"><NavLink to="/admin_dashboard" activeClassName="is-active" className="header-NavLink">admin dashboard</NavLink></li>
-            </>
-          )
+            && (
+              <>
+                <li className="header-ul__li"><NavLink to="/" className="header-NavLink" onClick={logoutUser}>logout</NavLink></li>
+                <li className="header-ul__li"><NavLink to="/admin_dashboard" activeClassName="is-active" className="header-NavLink">admin dashboard</NavLink></li>
+              </>
+            )
           }
         </ul>
+      </div>
+      <div className="nav">
+        {/* <label for="toggle">&#9776;</label> */}
+        <div className="report">
+          {/* <a href="#">reports</a> */}
+        </div>
       </div>
     </header>
   );
