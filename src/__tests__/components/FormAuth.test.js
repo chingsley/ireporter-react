@@ -11,13 +11,6 @@ describe('Test login/signup form', () => {
   const mountWrapper = mount(<FormAuth {...props} />);
   it('should allow users fill the form', () => {
     expect(toJson(mountWrapper)).toMatchSnapshot();
-    // console.log(mountWrapper.state());
-    // const { mountWrapper } = wrap();
-    // console.log(mountWrapper.find('#email').debug());
-    // updateInput(form, 'input[name="email"]', 'kc.eneja@gmaiml.com');
-    // updateInput(form, 'input[name="password"]', 'guessmypass');
-    // expect(wrapper.state('email')).toEqual('kc.eneja@gmaiml.com');
-    // expect(wrapper.state('password')).toEqual('guessmypass');
   });
   it('should allow users fill the form', () => {
     mountWrapper.find('#email').simulate('change', { target: { value: 'kc.eneja@gmail.com' } });

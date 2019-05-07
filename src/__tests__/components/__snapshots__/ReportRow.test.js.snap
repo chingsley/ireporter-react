@@ -24,7 +24,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "9b91cj",
+              "key": "5bgt4w",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -38,7 +38,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "9b91cj",
+            "key": "5bgt4w",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -197,11 +197,6 @@ exports[`Test the report form should render with the correct elements 1`] = `
               role="presentation"
             >
               Edit
-            </td>
-            <td
-              className="cell td-Delete-report"
-            >
-              X
             </td>
           </tr>
         </ReportRow>

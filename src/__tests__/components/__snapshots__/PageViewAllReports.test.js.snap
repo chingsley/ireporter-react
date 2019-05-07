@@ -24,7 +24,7 @@ exports[`Test the admin page should render with the correct elements 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "19voov",
+              "key": "anqpi9",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -38,7 +38,7 @@ exports[`Test the admin page should render with the correct elements 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "19voov",
+            "key": "anqpi9",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -81,7 +81,7 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                   "another-img.npn",
                 ],
                 "comment": "some comments here",
-                "createdOn": 1557195726465,
+                "createdOn": 1557245952626,
                 "id": 2,
                 "location": "1.2, 2.1",
                 "status": "draft",
@@ -91,7 +91,7 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                   "a-given-image.png",
                 ],
                 "comment": "some comments here",
-                "createdOn": 1557195726465,
+                "createdOn": 1557245952626,
                 "id": 1,
                 "location": "1.2, 2.1",
                 "status": "draft",
@@ -150,9 +150,6 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                     <td
                       className="cell"
                     />
-                    <td
-                      className="cell"
-                    />
                   </tr>
                   <Connect(ReportRow)
                     client="user"
@@ -171,7 +168,7 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                           "another-img.npn",
                         ],
                         "comment": "some comments here",
-                        "createdOn": 1557195726465,
+                        "createdOn": 1557245952626,
                         "id": 2,
                         "location": "1.2, 2.1",
                         "status": "draft",
@@ -197,7 +194,7 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                             "another-img.npn",
                           ],
                           "comment": "some comments here",
-                          "createdOn": 1557195726465,
+                          "createdOn": 1557245952626,
                           "id": 2,
                           "location": "1.2, 2.1",
                           "status": "draft",
@@ -311,7 +308,7 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                         <td
                           className="cell createdon"
                         >
-                          5571957264
+                          5572459526
                         </td>
                         <td
                           className="cell status client-view-draft"
@@ -325,11 +322,6 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                           role="presentation"
                         >
                           Edit
-                        </td>
-                        <td
-                          className="cell td-Delete-report"
-                        >
-                          X
                         </td>
                       </tr>
                     </ReportRow>
@@ -351,7 +343,7 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                           "a-given-image.png",
                         ],
                         "comment": "some comments here",
-                        "createdOn": 1557195726465,
+                        "createdOn": 1557245952626,
                         "id": 1,
                         "location": "1.2, 2.1",
                         "status": "draft",
@@ -377,7 +369,7 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                             "a-given-image.png",
                           ],
                           "comment": "some comments here",
-                          "createdOn": 1557195726465,
+                          "createdOn": 1557245952626,
                           "id": 1,
                           "location": "1.2, 2.1",
                           "status": "draft",
@@ -491,7 +483,7 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                         <td
                           className="cell createdon"
                         >
-                          5571957264
+                          5572459526
                         </td>
                         <td
                           className="cell status client-view-draft"
@@ -505,11 +497,6 @@ exports[`Test the admin page should render with the correct elements 1`] = `
                           role="presentation"
                         >
                           Edit
-                        </td>
-                        <td
-                          className="cell td-Delete-report"
-                        >
-                          X
                         </td>
                       </tr>
                     </ReportRow>

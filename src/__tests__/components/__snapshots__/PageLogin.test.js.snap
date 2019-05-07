@@ -24,7 +24,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "dvg6eu",
+              "key": "saltp5",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -38,7 +38,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "dvg6eu",
+            "key": "saltp5",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -112,7 +112,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
                   onChange={[Function]}
                   placeholder="password"
                   required={true}
-                  type="text"
+                  type="password"
                   value=""
                 />
                 <input

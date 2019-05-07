@@ -62,7 +62,7 @@ export class FormAuth extends Component {
           />
           <input
             className="container__form-input"
-            type="text"
+            type="password"
             id="password"
             placeholder="password"
             value={password}

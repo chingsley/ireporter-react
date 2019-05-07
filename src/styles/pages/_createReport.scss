@@ -21,9 +21,7 @@
     }
 
     &--inner-container {
-      // background:lightblue;
-      // border: 1px solid lightyellow;
-      // width: 10rem;
+      position: relative;
     }
   }
 
@@ -49,9 +47,8 @@
       outline: none;
       // background-color: #e8f0fe;
       background-color: transparent;
-       border: 1px solid black;
-       padding: 1em;
-
+      border: 1px solid black;
+      padding: 1em;
     }
   }
 
@@ -75,8 +72,8 @@
   height: 20rem;
   overflow: hidden;
   position: absolute;
-  top: 18em;
-  left: 3em;
+  top: 11em;
+  left: 5px;
   cursor: pointer;
 
   &__add-image {
@@ -100,5 +97,46 @@
     position: absolute;
     top: 10em;
     left: 10em;
+  }
+}
+
+@media only screen and (max-width: 714px) {
+  .report-form {
+  width: 90%;
+
+    &__radio-container {
+      width: 100%;
+
+      // &-radio {
+      //   font-size: 23px;
+      // }
+    }
+
+    &__input {
+      width: 100%;
+
+      &-textarea {
+        width: 100%;
+      }
+    }
+
+    &__button {
+      width: 60%;
+    }
+  }
+
+  .form-report-image-container {
+    display: none;
+  }
+
+  .report-form-image-upload-input {
+    display: block;
+    border: 1px solid black;
+    margin: 2em auto;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
   }
 }
