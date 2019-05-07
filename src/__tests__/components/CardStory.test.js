@@ -13,5 +13,8 @@ describe('Render report card', () => {
   it('should render with the correct elements', () => {
     expect(wrapper.find('div.card').exists()).toBe(true);
     expect(wrapper.find('.link-on-black').exists()).toBe(true);
+    expect(wrapper.find('.card__img').exists()).toBe(true);
+    expect(wrapper.find('.card__text-container').exists()).toBe(true);
+    expect(wrapper.find('.card__img-container').exists()).toBe(true);
   });
 });

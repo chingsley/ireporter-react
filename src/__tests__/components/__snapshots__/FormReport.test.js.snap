@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the report form should render with the correct elements 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "a3kqj3",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "a3kqj3",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Report)
+        createReport={[MockFunction]}
+        fetching={false}
+        history={
+          Object {
+            "location": Object {
+              "pathname": "",
+            },
+            "push": [MockFunction],
+          }
+        }
+        isLoggedIn={false}
+      >
+        <Report
+          createNewReport={[Function]}
+          createReport={[MockFunction]}
+          editReport={[Function]}
+          fetching={false}
+          history={
+            Object {
+              "location": Object {
+                "pathname": "",
+              },
+              "push": [MockFunction],
+            }
+          }
+          isLoggedIn={true}
+          mode="create"
+          report={Object {}}
+        >
+          <form
+            className="report-form"
+            id="report-form"
+            onSubmit={[Function]}
+          >
+            <div
+              className="report-form__radio-container"
+            >
+              <div
+                className="report-form__radio-container--inner-container"
+              >
+                <input
+                  className="report-form__radio-container-radio"
+                  id="redflag"
+                  name="type"
+                  onClick={[Function]}
+                  required={true}
+                  type="radio"
+                  value="red-flags"
+                />
+                redflag
+              </div>
+              <div
+                className="report-form__radio-container--inner-container"
+              >
+                <input
+                  className="report-form__radio-container-radio"
+                  id="intervention"
+                  name="type"
+                  onClick={[Function]}
+                  required={true}
+                  type="radio"
+                  value="interventions"
+                />
+                intervention
+              </div>
+            </div>
+            <input
+              className="report-form__input"
+              id="coords"
+              onChange={[Function]}
+              placeholder="coordinates"
+              required={true}
+              type="text"
+            />
+            <textarea
+              className="report-form__input-textarea"
+              id="comment"
+              name="comment"
+              onChange={[Function]}
+              placeholder="comments"
+              required={true}
+              rows="6"
+            />
+            <input
+              className="report-form-image-upload-input"
+              name="image"
+              onChange={[Function]}
+              type="file"
+            />
+            <div
+              className="form-report-image-container"
+              onClick={[Function]}
+            >
+              <span
+                className="form-report-image-container__add-image"
+              >
+                Add Image
+              </span>
+              <img
+                alt="report-evidence"
+                className="form-report-image-container__selected-image"
+                src="https://via.placeholder.com/700x400"
+              />
+            </div>
+            <button
+              className="report-form__button"
+              id="btn-send-report"
+              type="submit"
+            >
+              SEND
+            </button>
+          </form>
+        </Report>
+      </Connect(Report)>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;

@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the report form should render with the correct elements 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "7i63w5",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "7i63w5",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(HomePage)
+        authorise={[MockFunction]}
+        fetching={false}
+        formType="signup"
+        history={
+          Object {
+            "location": Object {
+              "pathname": "",
+            },
+            "push": [MockFunction],
+          }
+        }
+        isLoggedIn={false}
+      >
+        <HomePage
+          authorise={[MockFunction]}
+          fetching={false}
+          formType="signup"
+          getUserReports={[Function]}
+          history={
+            Object {
+              "location": Object {
+                "pathname": "",
+              },
+              "push": [MockFunction],
+            }
+          }
+          isLoggedIn={true}
+        >
+          <div>
+            <mainSection>
+              <section
+                className="main-section"
+              >
+                <h1
+                  className="mission-statement-big"
+                >
+                  <span
+                    className="mission-statement-big__style-ireporter"
+                  >
+                    <span
+                      className="mission-statement-big__style-ireporter--style-i"
+                    >
+                      i
+                    </span>
+                    <span
+                      className="mission-statement-big__style-ireporter--style-reporter"
+                    >
+                      Reporter
+                    </span>
+                  </span>
+                  <span
+                    className="mission-statement-big__style-africa"
+                  >
+                    Africa
+                  </span>
+                </h1>
+                <h3
+                  className="mission-statement-small"
+                >
+                  breaking barriers and creating a better future
+                </h3>
+              </section>
+            </mainSection>
+            <SectionAbout>
+              <section
+                className="section-fancy-2"
+              >
+                <section
+                  className="section-fancy-1"
+                >
+                  <section
+                    className="section-about"
+                  >
+                    <div
+                      className="section-about__left"
+                    >
+                      <p
+                        className="section-about__left--text"
+                      >
+                        <h1>
+                          What we do
+                        </h1>
+                      </p>
+                    </div>
+                    <div
+                      className="section-about__right"
+                    >
+                      <p
+                        className="section-about__right--text"
+                      >
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati excepturi minima asperiores iure reiciendis iste rerum, veniam voluptates, laudantium nulla, aspernatur ipsum dolorum eveniet a expedita nihil in sint! Accusantium? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatum tenetur, consectetur repudiandae nostrum esse animi blanditiis error voluptas voluptatem distinctio ducimus ad molestiae nemo quos veniam magnam incidunt assumenda? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit quae quibusdam minima? Natus doloribus sed maiores quam ea, nemo atque dignissimos vel magni, facere repudiandae fugiat distinctio saepe, unde pariatur!
+                      </p>
+                    </div>
+                  </section>
+                </section>
+              </section>
+            </SectionAbout>
+            <OurStories>
+              <section
+                className="section-stories"
+              >
+                <h1
+                  className="section-stories__title"
+                >
+                  Our Breakthroughs
+                </h1>
+                <div
+                  className="section-stories__cards-container"
+                >
+                  <CardStory
+                    src="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1557047211/people-3137670_1280.jpg"
+                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, facere at. Deserunt, accusantium tempora similique veniam sed sapiente consequatur adipisci asperiores ratione illo molestiae animi, voluptate quam ipsa dignissimos aliquid?"
+                    title="Corrupt school teacher conficted"
+                  >
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="card__img-container"
+                      >
+                        <img
+                          alt="Smiley face"
+                          className="card__img"
+                          src="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1557047211/people-3137670_1280.jpg"
+                        />
+                      </div>
+                      <div
+                        className="card__text-container"
+                      >
+                        <p>
+                          <h2>
+                            <Link
+                              className="link-on-black"
+                              to="/"
+                            >
+                              <a
+                                className="link-on-black"
+                                href="/"
+                                onClick={[Function]}
+                              >
+                                Corrupt school teacher conficted
+                              </a>
+                            </Link>
+                          </h2>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, facere at. Deserunt, accusantium tempora similique veniam sed sapiente consequatur adipisci asperiores ratione illo molestiae animi, voluptate quam ipsa dignissimos aliquid?
+                        </p>
+                      </div>
+                    </div>
+                  </CardStory>
+                  <CardStory
+                    src="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1557047212/children-486968_1280.jpg"
+                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, facere at. Deserunt, accusantium tempora similique veniam sed sapiente consequatur adipisci asperiores ratione illo molestiae animi, voluptate quam ipsa dignissimos aliquid?"
+                    title="Children rescued from child labour"
+                  >
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="card__img-container"
+                      >
+                        <img
+                          alt="Smiley face"
+                          className="card__img"
+                          src="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1557047212/children-486968_1280.jpg"
+                        />
+                      </div>
+                      <div
+                        className="card__text-container"
+                      >
+                        <p>
+                          <h2>
+                            <Link
+                              className="link-on-black"
+                              to="/"
+                            >
+                              <a
+                                className="link-on-black"
+                                href="/"
+                                onClick={[Function]}
+                              >
+                                Children rescued from child labour
+                              </a>
+                            </Link>
+                          </h2>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, facere at. Deserunt, accusantium tempora similique veniam sed sapiente consequatur adipisci asperiores ratione illo molestiae animi, voluptate quam ipsa dignissimos aliquid?
+                        </p>
+                      </div>
+                    </div>
+                  </CardStory>
+                  <CardStory
+                    src="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1548974192/lllx10jywxs3wqjr6jvh.jpg"
+                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, facere at. Deserunt, accusantium tempora similique veniam sed sapiente consequatur adipisci asperiores ratione illo molestiae animi, voluptate quam ipsa dignissimos aliquid?"
+                    title="Community saved from flooding"
+                  >
+                    <div
+                      className="card"
+                    >
+                      <div
+                        className="card__img-container"
+                      >
+                        <img
+                          alt="Smiley face"
+                          className="card__img"
+                          src="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1548974192/lllx10jywxs3wqjr6jvh.jpg"
+                        />
+                      </div>
+                      <div
+                        className="card__text-container"
+                      >
+                        <p>
+                          <h2>
+                            <Link
+                              className="link-on-black"
+                              to="/"
+                            >
+                              <a
+                                className="link-on-black"
+                                href="/"
+                                onClick={[Function]}
+                              >
+                                Community saved from flooding
+                              </a>
+                            </Link>
+                          </h2>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, facere at. Deserunt, accusantium tempora similique veniam sed sapiente consequatur adipisci asperiores ratione illo molestiae animi, voluptate quam ipsa dignissimos aliquid?
+                        </p>
+                      </div>
+                    </div>
+                  </CardStory>
+                </div>
+              </section>
+            </OurStories>
+          </div>
+        </HomePage>
+      </Connect(HomePage)>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;

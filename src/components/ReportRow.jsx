@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-param-reassign */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -106,7 +107,7 @@ export class ReportRow extends Component {
               >
                 {(client === 'user' && status === 'draft') ? 'Edit' : ''}
               </td>
-              <td className="cell td-Delete-report">{(client === 'user' && status === 'draft') ? 'X' : ''}</td>
+              {/* <td className="cell td-Delete-report">{(client === 'user' && status === 'draft') ? 'X' : ''}</td> */}
             </>
           )}
         </tr>

@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the report form should render with the correct elements 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "1d44oe",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "1d44oe",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Alert
+        authorise={[MockFunction]}
+        fetching={false}
+        formType="signup"
+        history={
+          Object {
+            "location": Object {
+              "pathname": "",
+            },
+            "push": [MockFunction],
+          }
+        }
+        isLoggedIn={false}
+      >
+        <styled.div
+          bgColor="green"
+          top={-100}
+        >
+          <StyledComponent
+            bgColor="green"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bdVaJa",
+                  "isStatic": false,
+                  "lastClassName": "fKYufn",
+                  "rules": Array [
+                    "
+  background-color: ",
+                    [Function],
+                    ";
+  color: white;
+  padding: 16px;
+  position: fixed;
+  top: ",
+                    [Function],
+                    "px;
+  right: 100px;
+  z-index: 999;
+  transition: top 0.5s ease;
+
+  > i {
+    margin-left: 8px;
+  }
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bdVaJa",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            top={-100}
+          >
+            <div
+              className="sc-bdVaJa fKYufn"
+            />
+          </StyledComponent>
+        </styled.div>
+      </Alert>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
