@@ -85,12 +85,8 @@ describe('Test the report form component', () => {
   const mountWrapper = mount(<Report {...props} />);
   it('should allow users fill the form', () => {
     mountWrapper
-      .find('#coords')
-      .simulate('change', { target: { value: '2.22, 3.33' } });
-    mountWrapper
       .find('#comment')
       .simulate('change', { target: { value: 'some valid comment' } });
-    expect(mountWrapper.state().location).toEqual('2.22, 3.33');
     expect(mountWrapper.state().comment).toEqual('some valid comment');
   });
   it('should allow users fill the form', async () => {
