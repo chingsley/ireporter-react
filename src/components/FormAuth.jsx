@@ -118,7 +118,7 @@ export class FormAuth extends Component {
               />
               <input
                 className="container__form-input"
-                type="text"
+                type="password"
                 id="adminSecret"
                 placeholder="admin secret key"
                 value={adminSecret}
