@@ -100,31 +100,7 @@
   }
 }
 
-@media only screen and (max-width: 714px) {
-  .report-form {
-  width: 90%;
-
-    &__radio-container {
-      width: 100%;
-
-      // &-radio {
-      //   font-size: 23px;
-      // }
-    }
-
-    &__input {
-      width: 100%;
-
-      &-textarea {
-        width: 100%;
-      }
-    }
-
-    &__button {
-      width: 60%;
-    }
-  }
-
+@media only screen and (max-width: 945px) {
   .form-report-image-container {
     display: none;
   }
@@ -140,3 +116,26 @@
     border-radius: 5px;
   }
 }
+
+@media only screen and (max-width: 714px) {
+  .report-form {
+  width: 90%;
+
+    &__radio-container {
+      width: 100%;
+    }
+
+    &__input {
+      width: 100%;
+
+      &-textarea {
+        width: 100%;
+      }
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+}
+
