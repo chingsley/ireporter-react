@@ -24,7 +24,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "0vaiga",
+              "key": "7mw6si",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -38,7 +38,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "0vaiga",
+            "key": "7mw6si",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -163,7 +163,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
                   id="adminSecret"
                   onChange={[Function]}
                   placeholder="admin secret key"
-                  type="text"
+                  type="password"
                   value=""
                 />
                 <button

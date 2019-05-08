@@ -80,7 +80,7 @@ exports[`Test login/signup form should allow users fill the form 1`] = `
         id="adminSecret"
         onChange={[Function]}
         placeholder="admin secret key"
-        type="text"
+        type="password"
         value=""
       />
       <button

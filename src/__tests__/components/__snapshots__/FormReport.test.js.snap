@@ -24,7 +24,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "emqhnx",
+              "key": "n7sgzd",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -38,7 +38,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "emqhnx",
+            "key": "n7sgzd",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -117,8 +117,22 @@ exports[`Test the report form should render with the correct elements 1`] = `
             </div>
             <input
               className="report-form__input"
-              id="coords"
+              id="address"
+              onBlur={[Function]}
               onChange={[Function]}
+              placeholder="address"
+              required={true}
+              style={
+                Object {
+                  "border": "",
+                }
+              }
+              type="text"
+              value=""
+            />
+            <input
+              className="report-form__input"
+              id="coords"
               placeholder="coordinates"
               required={true}
               type="text"
