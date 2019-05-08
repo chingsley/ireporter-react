@@ -1,4 +1,5 @@
 .card {
+  border: 1px solid $color-shaded-black;
   min-height: 10em;
   width: 23.3em;
   text-align: center;
@@ -13,15 +14,17 @@
 }
 
 .card__img-container {
-   border-bottom: 3px solid $color-red;
-   border-right: 3px solid $color-red;
    height: 15em;
    overflow: hidden;
    border-radius: 3px;
   }
   
   .card__text-container {
-    border-left: 3px solid $color-red;
-    border-radius: 3px;
     color: $color-shaded-black;
+}
+
+@media only screen and (max-width: 720px) {
+ .card {
+  margin-top: 2em;
+ }
 }

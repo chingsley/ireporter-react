@@ -24,7 +24,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "a3kqj3",
+              "key": "emqhnx",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -38,7 +38,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "a3kqj3",
+            "key": "emqhnx",
             "pathname": "/",
             "search": "",
             "state": undefined,

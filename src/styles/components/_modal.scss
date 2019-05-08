@@ -37,7 +37,7 @@
   margin: 10px 10px;
   margin-bottom: 2rem;
   display: flex;
-  width:  60em;
+  width: 60em;
 
   &__img {
     display: block;
@@ -49,7 +49,7 @@
     margin-left: 1em;
     color: $color-shaded-black;
     border-left: 2px solid $color-red;
-    padding:  0 1em;
+    padding: 0 1em;
   }
 }
 
@@ -60,7 +60,7 @@
   padding: 5px;
   position: absolute;
   top: 0.8em;
-  right:  0.8em;
+  right: 0.8em;
   cursor: pointer;
   border: none;
   outline: none;
@@ -71,5 +71,62 @@
   &:hover {
     // color: rgba(0, 0, 0, 1);
     color: red;
+  }
+}
+
+@media only screen and (max-width: 971px) {
+  .Overlay {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    opacity: 0.98;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  }
+
+  .Modal {
+    background-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+    align-items: center;
+    border-radius: 0.5em;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .container-modal-content {
+    display: block;
+  }
+
+  .media-container {
+    padding: 1em;
+    margin: 0 auto;
+    margin-bottom: 0;
+    display: block;
+    height: 100vh;
+    width: 80%;
+    overflow-y: auto;
+
+    &__img {
+      display: block;
+      width: 80%;
+      height: 40%;
+      margin: 0 auto;
+    }
+
+    &__text {
+      margin-top: 2em;
+      color: $color-shaded-black;
+      border-top: 2px solid $color-red;
+      border-left: none;
+      padding: 0 0;
+    }
   }
 }
