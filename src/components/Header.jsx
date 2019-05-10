@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/no-unknown-property */
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';

@@ -24,7 +24,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "n7sgzd",
+              "key": "hv9dgm",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -38,7 +38,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "n7sgzd",
+            "key": "hv9dgm",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -131,9 +131,10 @@ exports[`Test the report form should render with the correct elements 1`] = `
               value=""
             />
             <input
-              className="report-form__input"
+              className="report-form__input report-form__input-coordinates"
               id="coords"
               placeholder="coordinates"
+              readOnly={true}
               required={true}
               type="text"
             />
