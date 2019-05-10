@@ -35,9 +35,13 @@
     padding-left: 1rem;
     width: 80%;
     outline: none;
-    // background-color: #e8f0fe;
+    // background-color: #e8f0f0e;
     background-color: transparent;
     // border-radius: 20px;
+
+    &-coordinates {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
 
     &-textarea {
       font-size: 1.5rem;

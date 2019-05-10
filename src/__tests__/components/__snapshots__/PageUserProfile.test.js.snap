@@ -24,7 +24,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "zz55fi",
+              "key": "87p3ef",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -38,7 +38,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "zz55fi",
+            "key": "87p3ef",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -82,7 +82,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
                   "a-given-image.png",
                 ],
                 "comment": "some comments here",
-                "createdOn": 1557329571629,
+                "createdOn": 1557503376848,
                 "id": 1,
                 "location": "1.2, 2.1",
                 "status": "draft",
@@ -92,7 +92,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
                   "another-img.npn",
                 ],
                 "comment": "some comments here",
-                "createdOn": 1557329571629,
+                "createdOn": 1557503376848,
                 "id": 2,
                 "location": "1.2, 2.1",
                 "status": "draft",

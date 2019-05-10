@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+import axios from 'axios';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createNewReport, editReport } from '../actions/report';
 import setPreviewImage from '../utilities/setPreviewImage';
 import { alertUser } from './Alert';
-
-import geolocation from '../services/geolocation';
 
 export class Report extends Component {
   constructor(props) {
@@ -26,7 +25,7 @@ export class Report extends Component {
       type: report ? type : 'red-flag',
       images: (report && Images && Images[0]) ? Images[0] : null,
       previewImg: (report && Images && Images[0]) ? Images[0] : null,
-      noadd: false,
+      invalidAddress: false,
     };
 
     this.history = props.history;
@@ -37,37 +36,13 @@ export class Report extends Component {
 
   async onblur() {
     const { address } = this.state;
-    if (!address) {
-      this.setState({ noadd: true });
-      alertUser('Address required', 'error');
-      return;
+    try {
+      const { data: { results } } = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyDsPc92ZcMDHK2wx3zgcu8ysBQVCOfBCSE`);
+      const { geometry: { location: { lat, lng } } } = results[0];
+      this.setState({ location: `${lat}, ${lng}` });
+    } catch (error) {
+      alertUser('Please provide a valid address', 'error');
     }
-    this.setState({ noadd: false });
-    geolocation.geocode({ address }, (err, result) => {
-      if (err) {
-        this.setState({ noadd: true });
-        alertUser('please provide a valid address', 'error');
-        this.setState({ address: '' });
-        this.setState({ location: '' });
-      }
-      const { status } = result;
-      if (status === 200) {
-        const { json } = result;
-        const { results, status: statusInJson } = json;
-        if (statusInJson !== 'OK') {
-          this.setState({ noadd: true });
-          alertUser('please provide a valid address', 'error');
-          this.setState({ address: '' });
-        }
-        const { geometry: { location: { lat, lng } } } = results[0];
-        this.setState({ location: `${lat}, ${lng}` });
-      } else {
-        this.setState({ noadd: true });
-        alertUser('please provide a valid address', 'error');
-        this.setState({ address: '' });
-        this.setState({ location: '' });
-      }
-    });
   }
 
   async onSubmit(e) {
@@ -101,6 +76,7 @@ export class Report extends Component {
       location,
       comment,
       previewImg,
+      invalidAddress,
     } = this.state;
     const { mode } = this.props;
     return (
@@ -139,7 +115,7 @@ export class Report extends Component {
             </div>
           )}
         <input
-          style={{ border: `${this.state.noadd ? '1px solid red' : ''}` }}
+          style={{ border: `${invalidAddress ? '1px solid red' : ''}` }}
           type="text"
           className="report-form__input"
           id="address"
@@ -151,12 +127,14 @@ export class Report extends Component {
         />
         <input
           type="text"
-          className="report-form__input"
+          className="report-form__input report-form__input-coordinates"
           id="coords"
           placeholder="coordinates"
           value={location}
-          // onChange={e => this.setState({ location: e.target.value })} // This will make this field readonly
+          // This next line will make this field readonly
+          // onChange={e => this.setState({ location: e.target.value })}
           required
+          readOnly
         />
         <textarea
           name="comment"
