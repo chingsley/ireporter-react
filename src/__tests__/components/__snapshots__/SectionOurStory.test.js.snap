@@ -76,7 +76,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
             <CardStory
               src="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1557047211/people-3137670_1280.jpg"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, facere at. Deserunt, accusantium tempora similique veniam sed sapiente consequatur adipisci asperiores ratione illo molestiae animi, voluptate quam ipsa dignissimos aliquid?"
-              title="Corrupt school teacher conficted"
+              title="Corrupt school teacher convicted"
             >
               <div
                 className="card"
@@ -104,7 +104,7 @@ exports[`Test the report form should render with the correct elements 1`] = `
                           href="/"
                           onClick={[Function]}
                         >
-                          Corrupt school teacher conficted
+                          Corrupt school teacher convicted
                         </a>
                       </Link>
                     </h2>
